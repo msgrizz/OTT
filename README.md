@@ -1,8 +1,17 @@
-How-to-use-SQLite-Database-in-Swift
+<우리가 함께한 시간>
+Team Name: 소세지(소프트웨어로 세상을 바꾸자, 지금!)
+<박재유><20163763><cpuu@kaist.ac.kr >
+<박현정><20163765><hyunjungpark@kaist.ac.kr>
+<장준영><20163817><elf@kaist.ac.kr>
+
 ===================================
 
-In this tutorial we cover how to use SQLite database in Swift. This is an example showing how to create a application that performs Insert, Update, Delete operation on a table called StudentInfo.
+우함시는 iPhone application(iOS 9) 과 Linux server(mysql) 로 구성되는 시스템이다.  iPhone application은 user의 위치정보를 server에 송신하고, 친구목록 등을 server로부터 수신한다. server에서는 자료를 데이터베이스화하여 저장한다. 회원관리 기능도 server와의 통신으로 작동한다.
 
-You can find complete tutorial on how to use this code repo here : <a target="_blank" href="http://www.theappguruz.com/blog/use-sqlite-database-swift">How to use SQLite Database in Swift</a>
+우함시는 아래와 같은 주요 기능이 있다.
 
-This Tutorial has been presented by The App Guruz - One of the best <a href="http://www.theappguruz.com/mobile-application-development/">Mobile Application Development Company in India</a>
+친구목록에 등록된 user간에 phone의 고유한 MAC Address를 저장하여, Phone to Phone 간 Bluetooth 탐색시 친구목록에 등록된 User 정보와 비교하여 해당 user와의 거리가 일정한 반경안에 속해있음을 계산함으로써 상호 친밀도를 측정하고자 한다.
+
+측정되는 정보로는 사용자의 GPS 위치정보, 기기의 블루투스 신호강도 등이 있으며 해당 내용들은 개인정보 보호를 위해 암호화하여 저장한다. 특히 계정의 패스워드는 안전한 암호학적 해쉬 알고리즘을 통해 복호화할 수 없도록 일방향 암호화하는 방식으로 저장한다.
+
+서버에 축적되어있는 자료를 이용하여 친구목록에 있는 각 회원들과의 데이터 통계를 분석하여 이를 시각화하여 우함시 어플리케이션을 통해 쉽게 조회할 수 있도록 제공한다. 그 외에도 위치정보 등은 Google Map API를 활용하여 소중한 사람과 함께했던 여정들을 확인할 수 있도록 보여준다.
