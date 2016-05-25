@@ -4,7 +4,7 @@ Team Name: 소세지(소프트웨어로 세상을 바꾸자, 지금!)
 <박현정><20163765><hyunjungpark@kaist.ac.kr>
 <장준영><20163817><elf@kaist.ac.kr>
 
-===================================
+====================================
 
 우함시는 iPhone application(iOS 9) 과 Linux server(mysql) 로 구성되는 시스템이다.  iPhone application은 user의 위치정보를 server에 송신하고, 친구목록 등을 server로부터 수신한다. server에서는 자료를 데이터베이스화하여 저장한다. 회원관리 기능도 server와의 통신으로 작동한다.
 
