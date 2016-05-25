@@ -2,7 +2,7 @@
 
 Team Name: 소세지(소프트웨어로 세상을 바꾸자, 지금!)
 
-<박재유><20163763><cpuu@kaist.ac.kr >
+<박재유><20163763><cpuu@kaist.ac.kr>
 
 <박현정><20163765><hyunjungpark@kaist.ac.kr>
 
