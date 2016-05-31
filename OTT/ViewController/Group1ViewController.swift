@@ -51,8 +51,8 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
         else{
             let group:Group = marrGroupData.objectAtIndex((indexPath.row)-1) as! Group
             cell.lblContent.text = "Name : \(group.GROUP_NM)  \n  Value : \(group.GROUP_VALUE)"
-            cell.btnDelete.tag = (indexPath.row)-1
-            cell.btnEdit.tag = (indexPath.row)-1
+            //cell.btnDelete.tag = (indexPath.row)-1
+            //cell.btnEdit.tag = (indexPath.row)-1
         }
         return cell
     }

@@ -42,7 +42,7 @@ class ModelManager: NSObject {
         var resultSet: FMResultSet!
         if(Group_SEQ == 9999)
         {
-            resultSet = sharedInstance.database!.executeQuery("select * from group_member", withArgumentsInArray: nil)
+            resultSet = sharedInstance.database!.executeQuery("SELECT GROUP_MEMBER_NM, GROUP_MEMBER_VALUE FROM GROUP_MEMBER ORDER BY GROUP_MEMBER_VALUE DESC, GROUP_MEMBER_NM", withArgumentsInArray: nil)
         }
         else
         {

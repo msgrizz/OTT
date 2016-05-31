@@ -67,7 +67,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGL-dh-iY8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGL-dh-iY8">
                                                     <rect key="frame" x="8" y="8" width="438" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="haw-Kh-avw"/>
@@ -76,55 +76,15 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7L-Iq-ITh">
-                                                    <rect key="frame" x="400" y="15" width="65" height="30"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="J0U-jG-nGF"/>
-                                                        <constraint firstAttribute="width" constant="65" id="ZwP-6Q-F3m"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <state key="normal" title="Edit">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="btnEditClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeP-IA-Tga"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJK-51-veu">
-                                                    <rect key="frame" x="485" y="15" width="65" height="30"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="2yr-lo-YVa"/>
-                                                        <constraint firstAttribute="width" constant="65" id="IHW-W5-bC6"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <state key="normal" title="Delete">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="btnDeleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="giV-Nr-dsC"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="o7L-Iq-ITh" firstAttribute="leading" secondItem="HGL-dh-iY8" secondAttribute="trailing" constant="8" id="8xD-RQ-O98"/>
-                                                <constraint firstItem="KJK-51-veu" firstAttribute="leading" secondItem="o7L-Iq-ITh" secondAttribute="trailing" constant="8" id="AaR-1l-dLu"/>
                                                 <constraint firstAttribute="centerY" secondItem="HGL-dh-iY8" secondAttribute="centerY" id="LAu-lj-bco"/>
-                                                <constraint firstItem="KJK-51-veu" firstAttribute="trailing" secondItem="uob-t8-uql" secondAttribute="trailingMargin" id="MGL-IA-aUS"/>
                                                 <constraint firstItem="HGL-dh-iY8" firstAttribute="leading" secondItem="uob-t8-uql" secondAttribute="leadingMargin" id="W6Q-9T-aqc"/>
                                                 <constraint firstItem="HGL-dh-iY8" firstAttribute="bottom" secondItem="uob-t8-uql" secondAttribute="bottomMargin" id="aOF-w5-6nv"/>
-                                                <constraint firstAttribute="centerY" secondItem="KJK-51-veu" secondAttribute="centerY" id="aTN-WE-kXg"/>
                                                 <constraint firstItem="HGL-dh-iY8" firstAttribute="top" secondItem="uob-t8-uql" secondAttribute="topMargin" id="g3k-31-V0c"/>
-                                                <constraint firstAttribute="centerY" secondItem="o7L-Iq-ITh" secondAttribute="centerY" id="iL2-SF-4h4"/>
-                                                <constraint firstItem="o7L-Iq-ITh" firstAttribute="leading" secondItem="HGL-dh-iY8" secondAttribute="trailing" constant="8" id="q94-PR-ngI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="btnDelete" destination="KJK-51-veu" id="7zl-0b-1Fo"/>
-                                            <outlet property="btnEdit" destination="o7L-Iq-ITh" id="I4Z-RN-vmN"/>
                                             <outlet property="lblContent" destination="HGL-dh-iY8" id="hSl-hf-kal"/>
                                         </connections>
                                     </tableViewCell>
