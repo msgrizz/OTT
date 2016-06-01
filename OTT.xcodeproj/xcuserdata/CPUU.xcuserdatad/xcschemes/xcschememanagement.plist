@@ -4,20 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DbDemoExampleSwift.xcscheme</key>
+		<key>BlueCap.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>EAD5F4C41B7A073200EBC695</key>
+		<key>05840F5E194206F100C744E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EAD5F4D91B7A073200EBC695</key>
+		<key>05840F72194206F100C744E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
