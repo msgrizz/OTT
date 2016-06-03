@@ -55,12 +55,21 @@ class Group3ViewController: UIViewController , UITableViewDataSource,UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  
+        let cellIdentifier = "Cell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
+        }
+        /*
         let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
-
+        cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: "LabelCell")
+         */
         let member:GroupMember = marrMemberData.objectAtIndex((indexPath.row)) as! GroupMember
 
         //cell.lblContent.text = "Name : \(member.GROUP_MEMBER_NM)  \n  Value : \(member.GROUP_MEMBER_VALUE)"
         cell.textLabel?.text = "\(member.GROUP_MEMBER_NM) "
+        cell.detailTextLabel?.text = "\(member.GROUP_MEMBER_VALUE) "
         
         return cell
     }
