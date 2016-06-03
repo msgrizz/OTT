@@ -91,6 +91,8 @@
 		B963077A1CFECB8F00F4C22A /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96307791CFECB8F00F4C22A /* FriendCell.swift */; };
 		B963077C1CFECBD300F4C22A /* Group2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963077B1CFECBD300F4C22A /* Group2ViewController.swift */; };
 		B963077E1CFECBEE00F4C22A /* Group3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963077D1CFECBEE00F4C22A /* Group3ViewController.swift */; };
+		B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF31D016E960038C818 /* Home1ViewController.swift */; };
+		B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +242,8 @@
 		B96307791CFECB8F00F4C22A /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		B963077B1CFECBD300F4C22A /* Group2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group2ViewController.swift; sourceTree = "<group>"; };
 		B963077D1CFECBEE00F4C22A /* Group3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group3ViewController.swift; sourceTree = "<group>"; };
+		B97E8DF31D016E960038C818 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
+		B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +369,8 @@
 				05E68703195087D0009B38DA /* Profiles */,
 				05840F62194206F100C744E6 /* Supporting Files */,
 				05764D7D1969D01900E6C801 /* Utils */,
+				B97E8DF31D016E960038C818 /* Home1ViewController.swift */,
+				B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */,
 			);
 			path = OTT;
 			sourceTree = "<group>";
@@ -658,6 +664,7 @@
 				05B45C0419A78C6B009DAF6D /* UIAlertControllerExtensions.swift in Sources */,
 				05FAFC3519D30247003725B0 /* Notify.swift in Sources */,
 				05D9D51619B0E464001DBEBC /* ConfigureScanServicesViewController.swift in Sources */,
+				B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */,
 				05B6F07B19587AB700D798CB /* PeripheralServiceCharacteristicsViewController.swift in Sources */,
 				052A1ECC1C8CCDD300FBB45B /* ConfigurePeripheralMaximumDisconnectionsViewController.swift in Sources */,
 				B96307681CFEC7B600F4C22A /* FMDatabasePool.m in Sources */,
@@ -665,6 +672,7 @@
 				05883B2D19F7E21100CE8435 /* ConfigurePeripheralMaximumTimeoutsViewController.swift in Sources */,
 				05F2A8DB199271FA00004260 /* ServiceCharacteristicProfileValuesViewController.swift in Sources */,
 				05E68701194FF5A2009B38DA /* PeripheralViewController.swift in Sources */,
+				B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */,
 				05B48B5819C9B7DF00800327 /* BeaconCell.swift in Sources */,
 				05F2A8DD199271FA00004260 /* ServiceProfilesViewController.swift in Sources */,
 				05F2A8DC199271FA00004260 /* ServiceCharacteristicProfileViewController.swift in Sources */,

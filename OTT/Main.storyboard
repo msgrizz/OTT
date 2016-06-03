@@ -3333,7 +3333,7 @@
                         <color key="barTintColor" red="0.08235294371843338" green="0.58823531866073608" blue="0.83137261867523193" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Iax-qU-br4" kind="relationship" relationship="rootViewController" id="A8z-z0-YdY"/>
+                        <segue destination="qzB-hC-tZK" kind="relationship" relationship="rootViewController" id="je6-yp-6sR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyK-sN-HCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3775,6 +3775,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3h-4e-nDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2618" y="1158"/>
+        </scene>
+        <!--Home1-->
+        <scene sceneID="pqh-bu-B92">
+            <objects>
+                <tableViewController id="qzB-hC-tZK" userLabel="Home1" customClass="Home1ViewController" customModule="DbDemoExampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="tb5-lA-D5f" userLabel="Table1 View">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Home1Cell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Home1Cell" rowHeight="100" id="bOd-uJ-Gwy" customClass="Home1ViewCell" customModule="DbDemoExampleSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOd-uJ-Gwy" id="jeW-Ju-YcM">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Intimate Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVK-E0-bb1">
+                                            <rect key="frame" x="19" y="25" width="250" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lr6-Cs-9ld">
+                                            <rect key="frame" x="163" y="0.0" width="190" height="97"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KVK-E0-bb1" firstAttribute="centerY" secondItem="jeW-Ju-YcM" secondAttribute="centerY" id="1zg-zw-cPf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="CellImage" destination="Lr6-Cs-9ld" id="JIe-Px-EF0"/>
+                                    <outlet property="CellLabel" destination="KVK-E0-bb1" id="k9x-mb-c5y"/>
+                                    <segue destination="Iax-qU-br4" kind="show" id="dGG-su-CWK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qzB-hC-tZK" id="AI4-My-Ydo"/>
+                            <outlet property="delegate" destination="qzB-hC-tZK" id="UGv-FZ-MdT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="CkM-pj-FXE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMx-2x-Kgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-461"/>
         </scene>
     </scenes>
     <resources>

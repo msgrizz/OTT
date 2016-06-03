@@ -146,9 +146,9 @@ class PeripheralsViewController : UITableViewController {
 
     func setScanButton() {
         if self.scanStatus {
-            self.navigationItem.setLeftBarButtonItem(self.stopScanBarButtonItem, animated:false)
+            self.navigationItem.setRightBarButtonItem(self.stopScanBarButtonItem, animated:false)
         } else {
-            self.navigationItem.setLeftBarButtonItem(self.startScanBarButtonItem, animated:false)
+            self.navigationItem.setRightBarButtonItem(self.startScanBarButtonItem, animated:false)
         }
     }
 
