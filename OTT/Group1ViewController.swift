@@ -63,6 +63,18 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
         return "Name with value"
     }
     
+    func imageResize (cellimage:UIImage, sizeChange:CGSize)-> UIImage{
+        
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(sizeChange, !hasAlpha, scale)
+        cellimage.drawInRect(CGRect(origin: CGPointZero, size: sizeChange))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:FriendCell = tableView.dequeueReusableCellWithIdentifier("cell") as! FriendCell
         if(indexPath.row == 0)
@@ -74,6 +86,8 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
             let group:Group = marrGroupData.objectAtIndex((indexPath.row)-1) as! Group
             cell.lblContent.text = "\(group.GROUP_NM)"
             cell.valContent.text = "\(group.GROUP_VALUE)"
+            
+            cell.GroupImage.image! = imageResize(UIImage(named: group.GROUP_ICON_FILE_NM)!, sizeChange: CGSizeMake(30,30))
             //cell.btnDelete.tag = (indexPath.row)-1
             //cell.btnEdit.tag = (indexPath.row)-1
         }

@@ -15,6 +15,8 @@ class FriendCell: UITableViewCell {
     @IBOutlet weak var btnEdit: UIButton!
     @IBOutlet weak var btnDelete: UIButton!
     
+    @IBOutlet weak var GroupImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
