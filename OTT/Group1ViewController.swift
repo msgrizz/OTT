@@ -67,11 +67,13 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
         let cell:FriendCell = tableView.dequeueReusableCellWithIdentifier("cell") as! FriendCell
         if(indexPath.row == 0)
         {
-            cell.lblContent.text = "Name : All Members  \n  Value : \(averageValue)"   //고쳐야 함. 평균 계산하도록.
+            cell.lblContent.text = "All Members"
+            cell.valContent.text = "\(averageValue)"
         }
         else{
             let group:Group = marrGroupData.objectAtIndex((indexPath.row)-1) as! Group
-            cell.lblContent.text = "Name : \(group.GROUP_NM)  \n  Value : \(group.GROUP_VALUE)"
+            cell.lblContent.text = "\(group.GROUP_NM)"
+            cell.valContent.text = "\(group.GROUP_VALUE)"
             //cell.btnDelete.tag = (indexPath.row)-1
             //cell.btnEdit.tag = (indexPath.row)-1
         }

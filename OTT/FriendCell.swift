@@ -10,6 +10,7 @@ import UIKit
 
 class FriendCell: UITableViewCell {
     
+    @IBOutlet weak var valContent: UILabel!
     @IBOutlet weak var lblContent: UILabel!
     @IBOutlet weak var btnEdit: UIButton!
     @IBOutlet weak var btnDelete: UIButton!
