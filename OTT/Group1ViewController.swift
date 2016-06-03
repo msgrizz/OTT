@@ -12,6 +12,7 @@ import UIKit
 class Group1ViewController: UIViewController , UITableViewDataSource,UITableViewDelegate {
     var valueToPass:Int = 0
     var marrGroupData : NSMutableArray!
+    var averageValue:Double = 0
     @IBOutlet weak var tbGroupData: UITableView!
     
     override func viewDidLoad() {
@@ -45,6 +46,11 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
         marrGroupData = NSMutableArray()
         marrGroupData = ModelManager.getInstance().getAllGroupData()
         tbGroupData.reloadData()
+        
+        //All member의 평균 계산하기
+        averageValue = ModelManager.getInstance().getAllMemberAverage()
+        //print("\(averageValue)")
+        
     }
     
     //MARK: UITableView delegate methods
@@ -53,11 +59,15 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
         return marrGroupData.count + 1
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Name with value"
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:FriendCell = tableView.dequeueReusableCellWithIdentifier("cell") as! FriendCell
         if(indexPath.row == 0)
         {
-            cell.lblContent.text = "Name : All Members  \n  Value : 7.11"
+            cell.lblContent.text = "Name : All Members  \n  Value : \(averageValue)"   //고쳐야 함. 평균 계산하도록.
         }
         else{
             let group:Group = marrGroupData.objectAtIndex((indexPath.row)-1) as! Group

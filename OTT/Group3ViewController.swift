@@ -22,6 +22,8 @@ class Group3ViewController: UIViewController , UITableViewDataSource,UITableView
         marrMemberData = NSMutableArray()
         marrMemberData = ModelManager.getInstance().getGroupMemberData(Group_SEQ)
         tbMemberData.reloadData()
+        
+        
     }
     
 //    @IBAction func btnBackClicked(sender: AnyObject)
@@ -54,9 +56,12 @@ class Group3ViewController: UIViewController , UITableViewDataSource,UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
-        
+
         let member:GroupMember = marrMemberData.objectAtIndex((indexPath.row)) as! GroupMember
+
+        //cell.lblContent.text = "Name : \(member.GROUP_MEMBER_NM)  \n  Value : \(member.GROUP_MEMBER_VALUE)"
         cell.textLabel?.text = "\(member.GROUP_MEMBER_NM) "
+        
         return cell
     }
     

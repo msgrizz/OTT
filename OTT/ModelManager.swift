@@ -63,6 +63,20 @@ class ModelManager: NSObject {
         return marrFriendInfo
     }
     
+    func getAllMemberAverage() -> Double{
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("select avg(group_member_value) as ave from group_member", withArgumentsInArray: nil)
+        var ave:Double = 0
+        if (resultSet != nil) {
+            while resultSet.next() {
+                ave = Double(resultSet.stringForColumn("ave"))!
+            }
+        }
+        sharedInstance.database!.close()
+        //print("\(ave)")
+        return ave
+    }
+    
     func deleteGroupData(groupInfo: Group) -> Bool {
         sharedInstance.database!.open()
         let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM group_detail WHERE GROUP_SEQ=?", withArgumentsInArray: [groupInfo.GROUP_SEQ])

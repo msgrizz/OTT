@@ -19,7 +19,7 @@ class Home1ViewController: UITableViewController {
         
         CellNames = ["Intimate Space", "Personal Space", "Social Space", "Public Space"]
         
-        CellImages = ["icon3.png", "icon3.png", "icon3.png", "icon3.png"]
+        CellImages = ["Intimate.png", "Personal.png", "Social.png", "Public.png"]
         
         tableView.estimatedRowHeight = 50
         
