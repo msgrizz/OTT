@@ -17,6 +17,16 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //navigation bar style
+        let font = UIFont(name:"Thonburi", size:20.0)
+        var titleAttributes : [String:AnyObject]
+        if let defaultTitleAttributes = UINavigationBar.appearance().titleTextAttributes {
+            titleAttributes = defaultTitleAttributes
+        } else {
+            titleAttributes = [String:AnyObject]()
+        }
+        titleAttributes[NSFontAttributeName] = font
+        self.navigationController?.navigationBar.titleTextAttributes = titleAttributes
     }
     
     override func viewWillAppear(animated: Bool) {

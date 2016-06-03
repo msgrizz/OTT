@@ -23,6 +23,8 @@ class Home1ViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 50
         
+        self.styleNavigationBar()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
