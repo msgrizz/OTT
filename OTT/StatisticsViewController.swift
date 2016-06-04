@@ -11,29 +11,36 @@ import UIKit
 
 class StatisticsViewController: UIViewController {
     
+    enum TabIndex : Int {
+        case FirstChildTab = 0
+        case SecondChildTab = 1
+        case ThirdChildTab = 2
+    }
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var contentView: UIView!
     
-    @IBOutlet weak var textLabel: UILabel!
+    var currentViewController: UIViewController?
+    lazy var firstChildTabVC: UIViewController? = {
+        let firstChildTabVC = self.storyboard?.instantiateViewControllerWithIdentifier("Statistics1ViewControllerId")
+        return firstChildTabVC
+    }()
+    lazy var secondChildTabVC : UIViewController? = {
+        let secondChildTabVC = self.storyboard?.instantiateViewControllerWithIdentifier("Statistics2ViewControllerId")
+        return secondChildTabVC
+    }()
+    lazy var thirdChildTabVC : UIViewController? = {
+        let thirdChildTabVC = self.storyboard?.instantiateViewControllerWithIdentifier("Statistics3ViewControllerId")
+        return thirdChildTabVC
+    }()
     
-    /* Creating the UISegmented Control programatically
-     
-     //    var segmentedControl:UISegmentedControl!
-     
-     override func viewDidLoad() {
-     super.viewDidLoad()
-     // Do any additional setup after loading the view, typically from a nib.
-     segmentedControl = UISegmentedControl (items: ["First","Second","Third"])
-     segmentedControl.frame = CGRectMake(60, 250,200, 30)
-     segmentedControl.selectedSegmentIndex = 0
-     segmentedControl.addTarget(self, action: "segmentedControlAction:", forControlEvents: .ValueChanged)
-     self.view.addSubview(segmentedControl)
-     }
-     
-     */
+    
+    
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         //navigation bar style
         let font = UIFont(name:"Thonburi", size:20.0)
         var titleAttributes : [String:AnyObject]
@@ -44,34 +51,55 @@ class StatisticsViewController: UIViewController {
         }
         titleAttributes[NSFontAttributeName] = font
         self.navigationController?.navigationBar.titleTextAttributes = titleAttributes
-        //
-        textLabel.text = "Daily Segment Selected";
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @IBAction func segmentedControlAction(sender: AnyObject) {
         
-        if(segmentedControl.selectedSegmentIndex == 0)
-        {
-            textLabel.text = "Daily Segment Selected";
+        //segmentedControl.initUI()
+        segmentedControl.selectedSegmentIndex = TabIndex.FirstChildTab.rawValue
+        displayCurrentTab(TabIndex.FirstChildTab.rawValue)
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let currentViewController = currentViewController {
+            currentViewController.viewWillDisappear(animated)
         }
-        else if(segmentedControl.selectedSegmentIndex == 1)
-        {
-            textLabel.text = "Weekly Segment Selected";
+    }
+    
+    // MARK: - Switching Tabs Functions
+    @IBAction func switchTabs(sender: UISegmentedControl) {
+        self.currentViewController!.view.removeFromSuperview()
+        self.currentViewController!.removeFromParentViewController()
+        
+        displayCurrentTab(sender.selectedSegmentIndex)
+    }
+    
+    func displayCurrentTab(tabIndex: Int){
+        if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
+            
+            self.addChildViewController(vc)
+            vc.didMoveToParentViewController(self)
+            
+            vc.view.frame = self.contentView.bounds
+            self.contentView.addSubview(vc.view)
+            self.currentViewController = vc
         }
-        else if(segmentedControl.selectedSegmentIndex == 2)
-        {
-            textLabel.text = "Monthly Segment Selected";
+    }
+    
+    func viewControllerForSelectedSegmentIndex(index: Int) -> UIViewController? {
+        var vc: UIViewController?
+        switch index {
+        case TabIndex.FirstChildTab.rawValue :
+            vc = firstChildTabVC
+        case TabIndex.SecondChildTab.rawValue :
+            vc = secondChildTabVC
+        case TabIndex.ThirdChildTab.rawValue :
+            vc = thirdChildTabVC
+        default:
+            return nil
         }
-        else if(segmentedControl.selectedSegmentIndex == 3)
-        {
-            textLabel.text = "Lifetime Segment Selected";
-        }
+        
+        return vc
     }
 }
+
 
