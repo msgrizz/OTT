@@ -97,6 +97,8 @@
 		B9742BB71D02E724002A9BF9 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */; };
 		B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF31D016E960038C818 /* Home1ViewController.swift */; };
 		B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */; };
+		B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; };
+		B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,41 @@
 			remoteGlobalIDString = 05840F5E194206F100C744E6;
 			remoteInfo = BlueCap;
 		};
+		B9D968631D04709F00777EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		B9D968651D04709F00777EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		B9D968671D04709F00777EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
+		B9D968691D04709F00777EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		B9D9686D1D04711500777EA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -145,6 +182,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0551210619F5554C00ED3B74 /* BlueCapKit.framework in Embed Frameworks */,
+				B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +290,7 @@
 		B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF31D016E960038C818 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewCell.swift; sourceTree = "<group>"; };
+		B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +300,7 @@
 			files = (
 				B96307581CFEC71F00F4C22A /* libsqlite3.0.tbd in Frameworks */,
 				0551210519F5554C00ED3B74 /* BlueCapKit.framework in Frameworks */,
+				B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */,
 				05B45BE719A788E0009DAF6D /* CoreLocation.framework in Frameworks */,
 				05840F8E1942098300C744E6 /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -337,11 +377,12 @@
 		05840F56194206F100C744E6 = {
 			isa = PBXGroup;
 			children = (
+				055120F919F553DB00ED3B74 /* BlueCapKit.xcodeproj */,
+				B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */,
 				B96307741CFEC9A500F4C22A /* ott_db.sqlite */,
 				B96307571CFEC71F00F4C22A /* libsqlite3.0.tbd */,
 				05840F8D1942098300C744E6 /* CoreBluetooth.framework */,
 				05B45BE519A788BC009DAF6D /* CoreLocation.framework */,
-				055120F919F553DB00ED3B74 /* BlueCapKit.xcodeproj */,
 				05840F61194206F100C744E6 /* OTT */,
 				05840F76194206F100C744E6 /* BlueCapTests */,
 				05840F60194206F100C744E6 /* Products */,
@@ -511,6 +552,17 @@
 			name = Statistics;
 			sourceTree = "<group>";
 		};
+		B9D9685D1D04709F00777EA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9D968641D04709F00777EA8 /* Charts.framework */,
+				B9D968661D04709F00777EA8 /* Charts.framework */,
+				B9D968681D04709F00777EA8 /* Charts.framework */,
+				B9D9686A1D04709F00777EA8 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -528,6 +580,7 @@
 			dependencies = (
 				0551210319F5541000ED3B74 /* PBXTargetDependency */,
 				0551210819F5554C00ED3B74 /* PBXTargetDependency */,
+				B9D9686E1D04711500777EA8 /* PBXTargetDependency */,
 			);
 			name = OTT;
 			productName = BlueCap;
@@ -588,6 +641,10 @@
 					ProductGroup = 055120FA19F553DB00ED3B74 /* Products */;
 					ProjectRef = 055120F919F553DB00ED3B74 /* BlueCapKit.xcodeproj */;
 				},
+				{
+					ProductGroup = B9D9685D1D04709F00777EA8 /* Products */;
+					ProjectRef = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -610,6 +667,34 @@
 			fileType = wrapper.cfbundle;
 			path = BlueCapKitTests.xctest;
 			remoteRef = 0551210019F553DB00ED3B74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B9D968641D04709F00777EA8 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = B9D968631D04709F00777EA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B9D968661D04709F00777EA8 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = B9D968651D04709F00777EA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B9D968681D04709F00777EA8 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = B9D968671D04709F00777EA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B9D9686A1D04709F00777EA8 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = B9D968691D04709F00777EA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -749,6 +834,11 @@
 			target = 05840F5E194206F100C744E6 /* OTT */;
 			targetProxy = 05840F74194206F100C744E6 /* PBXContainerItemProxy */;
 		};
+		B9D9686E1D04711500777EA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = B9D9686D1D04711500777EA8 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -840,6 +930,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "$(inherited)";
 				INFOPLIST_FILE = BlueCap/Info.plist;
@@ -864,6 +955,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BlueCap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
