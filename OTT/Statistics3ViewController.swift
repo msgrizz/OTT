@@ -17,7 +17,13 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPieChartView()
+        
 
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.pieChartView.animate(yAxisDuration: 1.4, easingOption: ChartEasingOption.EaseOutBack)
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,7 +36,7 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         let count = Int(5)
         
         let parties = [
-            "Party A", "Party B", "Party C", "Party D", "Party E", "Party F",
+            "Wife", "Team Manager", "Daughter", "MC 418 Clue", "Son", "Puppy",
             "Party G", "Party H", "Party I", "Party J", "Party K", "Party L",
             "Party M", "Party N", "Party O", "Party P", "Party Q", "Party R",
             "Party S", "Party T", "Party U", "Party V", "Party W", "Party X",
@@ -64,18 +70,32 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         // add a lot of colors
 
         
-        dataSet.colors = ChartColorTemplates.colorful()
+        dataSet.colors = ChartColorTemplates.vordiplom()
+        dataSet.drawValuesEnabled = true
+        dataSet.sliceSpace = 5.0
+        
+        dataSet.valueLinePart1OffsetPercentage = 0.8
+        dataSet.valueLinePart1Length = 0.2
+        dataSet.valueLinePart2Length = 0.4
 
         
         //let data = PieChartData(xVals: xVals, dataSet: dataSet)
         let data = PieChartData(xVals: xVals, dataSet: dataSet)
         
+
+        let pFormatter = NSNumberFormatter()
+        pFormatter.numberStyle = NSNumberFormatterStyle.PercentStyle
+        pFormatter.maximumFractionDigits = 1
+        pFormatter.multiplier = 1
+        pFormatter.percentSymbol = "%"
+        data.setValueFormatter(pFormatter)
+        data.setValueTextColor(UIColor.blackColor())
+        
+        
         
         pieChartView.data = data
         
-        dataSet.drawValuesEnabled = true
         
-        dataSet.sliceSpace = 4.0
     }
 
     private func setupPieChartView() {
@@ -83,7 +103,7 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         self.pieChartView.drawSlicesUnderHoleEnabled = false
         self.pieChartView.holeRadiusPercent = 0.58;
         self.pieChartView.transparentCircleRadiusPercent = 0.61
-        self.pieChartView.descriptionText = "차트의 설명"
+        self.pieChartView.descriptionText = ""
         self.pieChartView.setExtraOffsets(left: 5, top: 10, right: 5, bottom: 5)
         
         self.pieChartView.drawCenterTextEnabled = true
@@ -96,6 +116,8 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         
         print("setting")
         self.setPieChartData()
+        
+        
         
     }
     
