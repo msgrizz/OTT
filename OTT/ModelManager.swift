@@ -26,7 +26,7 @@ class ModelManager: NSObject {
     
     func addGroupData(groupInfo: Group) -> Bool {
         sharedInstance.database!.open()
-        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO group_detail (GROUP_NM ) VALUES (?)", withArgumentsInArray: [groupInfo.GROUP_NM , groupInfo.GROUP_VALUE ])
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO group_detail (GROUP_NM, GROUP_ICON_FILE_NM, USER_ID ) VALUES (?, ?, ?)", withArgumentsInArray: [groupInfo.GROUP_NM , groupInfo.GROUP_ICON_FILE_NM, 1000000001])
         sharedInstance.database!.close()
         return isInserted
     }

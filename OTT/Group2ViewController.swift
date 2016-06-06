@@ -68,7 +68,8 @@ class Group2ViewController: UIViewController {
             {
                 let groupData: Group = Group()
                 groupData.GROUP_NM = txtName.text!
-                //groupData.GROUP_VALUE = txtMarks.text!
+                groupData.GROUP_ICON_FILE_NM = txtMarks.text!
+                
                 let isInserted = ModelManager.getInstance().addGroupData(groupData)
                 if isInserted {
                     Util.invokeAlertMethod("", strBody: "Record Inserted successfully.", delegate: nil)
