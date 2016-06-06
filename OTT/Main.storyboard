@@ -3143,7 +3143,6 @@
                                 <connections>
                                     <outlet property="CellImage" destination="Lr6-Cs-9ld" id="JIe-Px-EF0"/>
                                     <outlet property="CellLabel" destination="KVK-E0-bb1" id="k9x-mb-c5y"/>
-                                    <segue destination="Iax-qU-br4" kind="show" id="dGG-su-CWK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -3153,6 +3152,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" id="CkM-pj-FXE"/>
+                    <connections>
+                        <segue destination="Iax-qU-br4" kind="show" identifier="spaceSegue" id="D1p-9M-72C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMx-2x-Kgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

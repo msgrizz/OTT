@@ -13,6 +13,7 @@ class Home1ViewController: UITableViewController {
     
     var CellImages = [String]()
     var CellNames = [String]()
+    var valueToTitle:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,46 @@ class Home1ViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //print(group.GROUP_NM)
+        
+        valueToTitle = indexPath.row
+
+        self.performSegueWithIdentifier("spaceSegue", sender: self)
+        
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "spaceSegue")
+        {
+            //get a reference to the destination view controller
+            let destinationVC:PeripheralsViewController = segue.destinationViewController as! PeripheralsViewController
+            
+            //set properties on the destination view controller
+            
+            if (valueToTitle == 0)
+            {
+                destinationVC.title = "Intimate"
+            }
+            else if(valueToTitle == 1)
+            {
+                destinationVC.title = "Personal"
+            }
+            else if(valueToTitle == 2)
+            {
+                destinationVC.title = "Social"
+            }
+            else if(valueToTitle == 3)
+            {
+                destinationVC.title = "Public"
+            }
+            //print("destinationVC.value : ?", destinationVC.groupMemberSeq)
+            //print("valuetopass : ?", valueToPass)
+            //etc...
+        }
+    }
+
     
     /*
      // Override to support conditional editing of the table view.

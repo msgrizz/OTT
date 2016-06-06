@@ -11,6 +11,7 @@ import UIKit
 
 class Group1ViewController: UIViewController , UITableViewDataSource,UITableViewDelegate {
     var valueToPass:Int = 0
+    var valueToTitle: String = String()
     var marrGroupData : NSMutableArray!
     var averageValue:Double = 0
     @IBOutlet weak var tbGroupData: UITableView!
@@ -99,11 +100,13 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
         if(indexPath.row == 0)
         {
             valueToPass = Int("9999")!
+            valueToTitle = "All Members"
         }
         else
         {
             let group:Group = marrGroupData.objectAtIndex((indexPath.row)-1) as! Group
             valueToPass = Int(group.GROUP_SEQ)!
+            valueToTitle = group.GROUP_NM
         }
         //print("true answer : ?", valueToPass)
         self.performSegueWithIdentifier("detailSegue", sender: self)
@@ -148,6 +151,7 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
             
             //set properties on the destination view controller
             destinationVC.groupMemberSeq = valueToPass
+            destinationVC.title = valueToTitle
             //print("destinationVC.value : ?", destinationVC.groupMemberSeq)
             //print("valuetopass : ?", valueToPass)
             //etc...
