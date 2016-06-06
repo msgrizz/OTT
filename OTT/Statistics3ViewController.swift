@@ -27,7 +27,7 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
     private func setPieChartData() {
         
         let mult = UInt32(100)
-        let count = Int(4)
+        let count = Int(5)
         
         let parties = [
             "Party A", "Party B", "Party C", "Party D", "Party E", "Party F",
@@ -42,31 +42,37 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         // IMPORTANT: In a PieChart, no values (Entry) should have the same xIndex (even if from different DataSets), since no values can be drawn above each other.
         for i in 0 ..< count
         {
-            let chartDataEntry = ChartDataEntry(value: Double((arc4random_uniform(mult) + mult/5)), xIndex: i)
+            let chartDataEntry = BarChartDataEntry(value: Double((arc4random_uniform(mult) + mult/5)), xIndex: i)
             yVals1.append(chartDataEntry)
         }
         
+        //let xVals = NSMutableArray()
         var xVals = [String?]()
         
         for i in 0 ..< count
         {
+            //xVals.addObject(parties[i % parties.count])
             xVals.append(parties[i % parties.count])
-            //[xVals addObject:parties[i % parties.count]]
+            //[xVals addObject:parties[i % parties.count]];
         }
         
-        let dataSet = PieChartDataSet(yVals: yVals1, label: "Election Results")
-        dataSet.sliceSpace = 3.0
+        print (xVals)
+
+        let dataSet = PieChartDataSet(yVals: yVals1, label: "")
+        dataSet.sliceSpace = 2.0
         
         // add a lot of colors
+
         
-        //var testColors = [UIColor]()
-        //testColors.append(UIColor.blueColor())
+        dataSet.colors = ChartColorTemplates.colorful()
+
+        
+        //let data = PieChartData(xVals: xVals, dataSet: dataSet)
         let data = PieChartData(xVals: xVals, dataSet: dataSet)
+        
         
         pieChartView.data = data
         
-        //dataSet.colors = testColors
-        dataSet.colors = ChartColorTemplates.colorful()
         dataSet.drawValuesEnabled = true
         
         dataSet.sliceSpace = 4.0
@@ -82,7 +88,7 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         
         self.pieChartView.drawCenterTextEnabled = true
         
-        //self.pieChartView.centerAttributedText = "asdf"!
+        //self.pieChartView.centerAttributedText = "차트의 설2명"
         self.pieChartView.drawHoleEnabled = true
         self.pieChartView.rotationAngle = 0
         self.pieChartView.rotationEnabled = true
