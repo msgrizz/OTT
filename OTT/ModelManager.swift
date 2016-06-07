@@ -31,6 +31,13 @@ class ModelManager: NSObject {
         return isInserted
     }
     
+    func addMemberData(memberInfo: GroupMember) -> Bool {
+        sharedInstance.database!.open()
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO group_member (GROUP_MEMBER_NM, GROUP_MEMBER_VALUE, GROUP_SEQ, USER_ID ) VALUES (?, ?, ?, ?)", withArgumentsInArray: [memberInfo.GROUP_MEMBER_NM , memberInfo.GROUP_MEMBER_VALUE, 3, 1000000001])
+        sharedInstance.database!.close()
+        return isInserted
+    }
+    
     func updateGroupData(groupInfo: Group) -> Bool {
         sharedInstance.database!.open()
         let isUpdated = sharedInstance.database!.executeUpdate("UPDATE group_detail SET GROUP_NM=?, WHERE GROUP_SEQ=?", withArgumentsInArray: [groupInfo.GROUP_NM, groupInfo.GROUP_VALUE, groupInfo.GROUP_SEQ])

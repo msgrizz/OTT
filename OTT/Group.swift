@@ -20,7 +20,7 @@ class Group: NSObject {
 
 class GroupMember: NSObject {
     
-    var GROUP_MEMBER_SEQ: String = String()
+    //var GROUP_MEMBER_SEQ: String = String()
     var GROUP_MEMBER_NM: String = String()
     var GROUP_MEMBER_VALUE: String = String()
 }
