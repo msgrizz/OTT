@@ -1,0 +1,79 @@
+//
+//  Statistics4ViewController.swift
+//  OTT
+//
+//  Created by 박재유 on 2016. 6. 7..
+//  Copyright © 2016년 Troy Stribling. All rights reserved.
+//
+
+
+import UIKit
+
+class Statistics4ViewController: UIViewController , UITableViewDataSource,UITableViewDelegate {
+    
+    // MARK: - UITableViewDataSource
+    var memberData : GroupMember!
+    var marrMemberData : NSMutableArray!
+    var groupMemberSeq : Int!
+    
+    @IBOutlet weak var tbMemberData: UITableView!
+    
+    func getMemberData(Group_SEQ: Int)
+    {
+        marrMemberData = NSMutableArray()
+        marrMemberData = ModelManager.getInstance().getGroupMemberData(Group_SEQ)
+        tbMemberData.reloadData()
+        
+        
+    }
+    
+    //    @IBAction func btnBackClicked(sender: AnyObject)
+    //   {
+    //        self.navigationController?.popViewControllerAnimated(true)
+    //    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.getMemberData(groupMemberSeq)
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // Return the number of sections.
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of rows in the section.
+        return marrMemberData.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Name with value"
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "Cell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
+        }
+        /*
+         let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
+         cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: "LabelCell")
+         */
+        let member:GroupMember = marrMemberData.objectAtIndex((indexPath.row)) as! GroupMember
+        
+        //cell.lblContent.text = "Name : \(member.GROUP_MEMBER_NM)  \n  Value : \(member.GROUP_MEMBER_VALUE)"
+        cell.textLabel?.text = "\(member.GROUP_MEMBER_NM) "
+        cell.detailTextLabel?.text = "\(member.GROUP_MEMBER_VALUE) "
+        
+        return cell
+    }
+    
+    
+}

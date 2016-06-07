@@ -15,8 +15,12 @@ class Statistics1ViewController: UIViewController {
         //print("First VC will appear")
     }
     
+
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         //print("First VC will disappear")
     }
+    
+
+    
 }
