@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Group4ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+class Group4ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtValue: UITextField!
@@ -35,6 +35,10 @@ class Group4ViewController: UIViewController, UITableViewDataSource,UITableViewD
         self.objects.append("iPhone 6")
         self.objects.append("iPad Air 2")
         self.objects.append("MacBook Pro")
+        
+        txtName.delegate = self
+        txtValue.delegate = self
+        txtValue.keyboardType = UIKeyboardType.NumberPad
     }
 
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -102,5 +106,13 @@ class Group4ViewController: UIViewController, UITableViewDataSource,UITableViewD
         }
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
