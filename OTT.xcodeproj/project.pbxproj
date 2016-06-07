@@ -97,6 +97,7 @@
 		B9742BB71D02E724002A9BF9 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */; };
 		B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF31D016E960038C818 /* Home1ViewController.swift */; };
 		B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */; };
+		B9A333371D06912200E6ACFC /* Group4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A333361D06912200E6ACFC /* Group4ViewController.swift */; };
 		B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; };
 		B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -290,6 +291,7 @@
 		B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF31D016E960038C818 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewCell.swift; sourceTree = "<group>"; };
+		B9A333361D06912200E6ACFC /* Group4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group4ViewController.swift; sourceTree = "<group>"; };
 		B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -524,10 +526,11 @@
 		B96307761CFECAA300F4C22A /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				B96307791CFECB8F00F4C22A /* FriendCell.swift */,
 				B96307771CFECABC00F4C22A /* Group1ViewController.swift */,
 				B963077B1CFECBD300F4C22A /* Group2ViewController.swift */,
-				B96307791CFECB8F00F4C22A /* FriendCell.swift */,
 				B963077D1CFECBEE00F4C22A /* Group3ViewController.swift */,
+				B9A333361D06912200E6ACFC /* Group4ViewController.swift */,
 			);
 			name = Group;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				0507973119C4CEEC00A4D547 /* BeaconsViewController.swift in Sources */,
 				05B1AEBA197C285700371E73 /* PeripheralServiceCharacteristicEditValueViewController.swift in Sources */,
 				05CA6C1219FA6AD000088A39 /* ConfigurePeripheralConnectionTimeoutViewController.swift in Sources */,
+				B9A333371D06912200E6ACFC /* Group4ViewController.swift in Sources */,
 				05B45BF619A78BA2009DAF6D /* PeripheralManagerServiceCharacteristicViewController.swift in Sources */,
 				05B6F0761957715800D798CB /* PeripheralServicesViewController.swift in Sources */,
 				05B45C0219A78C6B009DAF6D /* PeripheralStore.swift in Sources */,
