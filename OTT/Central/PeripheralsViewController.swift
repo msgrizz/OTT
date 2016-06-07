@@ -15,7 +15,7 @@ class PeripheralsViewController : UITableViewController {
     var stopScanBarButtonItem: UIBarButtonItem!
     var startScanBarButtonItem: UIBarButtonItem!
 
-    var scanStatus = false
+    var scanStatus = true
     var shouldUpdatePeripheralConnectionStatus = false
     var peripheralConnectionStatus = [NSUUID : Bool]()
 
@@ -63,6 +63,7 @@ class PeripheralsViewController : UITableViewController {
         super.viewDidLoad()
         self.styleNavigationBar()
         self.setScanButton()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -73,6 +74,7 @@ class PeripheralsViewController : UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(PeripheralsViewController.didBecomeActive), name: UIApplicationDidBecomeActiveNotification, object:nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(PeripheralsViewController.didEnterBackground), name: UIApplicationDidEnterBackgroundNotification, object:nil)
         self.setScanButton()
+        self.startScan()
     }
 
     override func viewDidDisappear(animated: Bool) {
@@ -316,24 +318,106 @@ class PeripheralsViewController : UITableViewController {
     }
     
     override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Singletons.centralManager.peripherals.count
+        return Singletons.centralManager.peripherals.count + 3
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.peripheralCell, forIndexPath: indexPath) as! PeripheralCell
-        let peripheral = self.peripherals[indexPath.row]
-        cell.nameLabel.text = peripheral.name
-        cell.accessoryType = .None
-        if peripheral.state == .Connected {
+        
+        if(indexPath.row == 0)
+        {
+            
+            if(self.title == "Intimate")
+            {
+                cell.nameLabel.text = "MI"
+            }
+            else if(self.title == "Personal")
+            {
+                cell.nameLabel.text = "HJPARK's Watch"
+            }
+            else if(self.title == "Social")
+            {
+                cell.nameLabel.text = "HJPARK's iPhone"
+            }
+            else
+            {
+                cell.nameLabel.text = "PONUS"
+            }
+            //cell.nameLabel.text = "CPUU's iPad"
             cell.nameLabel.textColor = UIColor.blackColor()
             cell.stateLabel.text = "Connected"
             cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
-        } else {
+            cell.accessoryType = .None
+            cell.rssiLabel.text = "-52"
+        }
+        else if(indexPath.row == 1)
+        {
+            if(self.title == "Intimate")
+            {
+                cell.nameLabel.text = "Father's Galaxy S7"
+            }
+            else if(self.title == "Personal")
+            {
+                cell.nameLabel.text = "CPUU's iPad"
+            }
+            else if(self.title == "Social")
+            {
+                cell.nameLabel.text = "Kimjaewook's MacBook"
+            }
+            else
+            {
+                cell.nameLabel.text = "BRITZ"
+            }
+            //cell.nameLabel.text = "Father's Galaxy S7"
             cell.nameLabel.textColor = UIColor.lightGrayColor()
             cell.stateLabel.text = "Disconnected"
             cell.stateLabel.textColor = UIColor.lightGrayColor()
+            cell.accessoryType = .None
+            cell.rssiLabel.text = "-111"
         }
-        cell.rssiLabel.text = "\(peripheral.RSSI)"
+        else if(indexPath.row == 2)
+        {
+            if(self.title == "Intimate")
+            {
+                cell.nameLabel.text = "BRITZ"
+            }
+            else if(self.title == "Personal")
+            {
+                cell.nameLabel.text = "Father's Galaxy S7"
+            }
+            else if(self.title == "Social")
+            {
+                cell.nameLabel.text = "CPUU's iPad"
+            }
+            else
+            {
+                cell.nameLabel.text = "Air-Pad-A7"
+            }
+            //cell.nameLabel.text = "CPUU's MacBook Pro"
+            cell.nameLabel.textColor = UIColor.blackColor()
+            cell.stateLabel.text = "Connected"
+            cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
+            cell.accessoryType = .None
+            cell.rssiLabel.text = "-93"
+        }
+        else
+        {
+            let peripheral = self.peripherals[indexPath.row-3]
+            cell.nameLabel.text = peripheral.name
+            cell.accessoryType = .None
+            if peripheral.state == .Connected {
+                cell.nameLabel.textColor = UIColor.blackColor()
+                cell.stateLabel.text = "Connected"
+                cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
+            }
+            else
+            {
+                cell.nameLabel.textColor = UIColor.lightGrayColor()
+                cell.stateLabel.text = "Disconnected"
+                cell.stateLabel.textColor = UIColor.lightGrayColor()
+            }
+            cell.rssiLabel.text = "\(peripheral.RSSI)"
+        }
         return cell
     }
 }

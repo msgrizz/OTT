@@ -33,7 +33,7 @@ class Group4ViewController: UIViewController, UITableViewDataSource,UITableViewD
         NewFriendTableView.dataSource = self
         self.objects.append("Eric's Apple Watch")
         self.objects.append("iPhone 6")
-        self.objects.append("iPad Air 2")
+        self.objects.append("Father's Galaxy S7")
         self.objects.append("MacBook Pro")
         
         txtName.delegate = self
