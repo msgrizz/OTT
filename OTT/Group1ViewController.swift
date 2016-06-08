@@ -13,7 +13,7 @@ class Group1ViewController: UIViewController , UITableViewDataSource,UITableView
     var valueToPass:Int = 0
     var valueToTitle: String = String()
     var marrGroupData : NSMutableArray!
-    var averageValue:Double = 0
+    var averageValue:Float = 0
     @IBOutlet weak var tbGroupData: UITableView!
     
     override func viewDidLoad() {

@@ -70,19 +70,22 @@ class ModelManager: NSObject {
         return marrFriendInfo
     }
     
-    func getAllMemberAverage() -> Double{
+    func getAllMemberAverage() -> Float{
         sharedInstance.database!.open()
         let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("select avg(group_member_value) as ave from group_member", withArgumentsInArray: nil)
-        var ave:Double = 0
+        var ave:Float = 0
         if (resultSet != nil) {
             while resultSet.next() {
-                ave = Double(resultSet.stringForColumn("ave"))!
+                ave = Float(resultSet.stringForColumn("ave"))!
+                
             }
         }
         sharedInstance.database!.close()
-        //print("\(ave)")
-        return ave
+        print("\(ave)")
+        return (round(100*ave)/100)
     }
+    
+
     
     func deleteGroupData(groupInfo: Group) -> Bool {
         sharedInstance.database!.open()
@@ -102,11 +105,33 @@ class ModelManager: NSObject {
                 groupInfo.GROUP_SEQ = resultSet.stringForColumn("GROUP_SEQ")
                 groupInfo.GROUP_ICON_FILE_NM = resultSet.stringForColumn("GROUP_ICON_FILE_NM")
                 groupInfo.GROUP_NM = resultSet.stringForColumn("GROUP_NM")
-                groupInfo.GROUP_VALUE = resultSet.stringForColumn("GROUP_VALUE")
+                //let floatValue:Float = resultSet.stringForColumn("GROUP_VALUE").floatValue
+                groupInfo.GROUP_VALUE = resultSet.stringForColumn("GROUP_VALUE") //String(format: "%.2f", floatValue)
+                //print(groupInfo.GROUP_VALUE)
                 marrGroupInfo.addObject(groupInfo)
             }
         }
         sharedInstance.database!.close()
         return marrGroupInfo
     }
+    
+    func getBrainAllData() -> NSMutableArray {
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT  A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ, A.GROUP_MEMBER_NM, TOTAL(A.GROUP_MEMBER_VALUE * (STRFTIME('%s', B.END_TIME) - STRFTIME('%s', B.START_TIME)) / 60 / (B.SPACE_TPCD * B.SPACE_TPCD)) AS RELATIONSHIP_SCORE FROM    GROUP_MEMBER A, MEETING B WHERE   A.USER_ID = B.USER_ID AND     A.GROUP_SEQ = B.GROUP_SEQ AND     A.GROUP_MEMBER_SEQ = B.GROUP_MEMBER_SEQ GROUP BY  A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ ORDER BY  RELATIONSHIP_SCORE DESC, B.END_TIME DESC, A.GROUP_MEMBER_NM, A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ", withArgumentsInArray: nil)
+        let marrBrainInfo : NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let brainInfo : BrainMember = BrainMember()
+                brainInfo.USER_ID = resultSet.stringForColumn("USER_ID")
+                brainInfo.GROUP_SEQ = resultSet.stringForColumn("GROUP_SEQ")
+                brainInfo.GROUP_MEMBER_SEQ = resultSet.stringForColumn("GROUP_MEMBER_SEQ")
+                brainInfo.GROUP_MEMBER_NM = resultSet.stringForColumn("GROUP_MEMBER_NM")
+                brainInfo.RELATIONSHIP_SCORE = resultSet.stringForColumn("RELATIONSHIP_SCORE")
+                marrBrainInfo.addObject(brainInfo)
+            }
+        }
+        sharedInstance.database!.close()
+        return marrBrainInfo
+    }
+    
 }

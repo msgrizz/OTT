@@ -12,6 +12,20 @@ class Statistics4ViewController: UITableViewController {
 
     @IBOutlet weak var tbAllMemberData: UITableView!
     
+    var memberData : BrainMember!
+    var marrMemberData : NSMutableArray!
+    
+    func getMemberData()
+    {
+        marrMemberData = NSMutableArray()
+        marrMemberData = ModelManager.getInstance().getBrainAllData()
+        tbAllMemberData.reloadData()
+        
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        self.getMemberData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,23 +45,38 @@ class Statistics4ViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return marrMemberData.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Name with calculated relationship score"
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cellIdentifier = "Cell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
+        }
+        /*
+         let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
+         cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: "LabelCell")
+         */
+        let brain:BrainMember = marrMemberData.objectAtIndex((indexPath.row)) as! BrainMember
+        
+        //cell.lblContent.text = "Name : \(member.GROUP_MEMBER_NM)  \n  Value : \(member.GROUP_MEMBER_VALUE)"
+        cell.textLabel?.text = "\(brain.GROUP_MEMBER_NM) "
+        cell.detailTextLabel?.text = "\(brain.RELATIONSHIP_SCORE) "
+        
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
