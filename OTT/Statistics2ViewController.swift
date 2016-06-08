@@ -56,22 +56,22 @@ class Statistics2ViewController: UITableViewController {
         if (indexPath.row == 0)
         {
             cell.textLabel?.text = "Intimate Space"
-            cell.detailTextLabel?.text = "6"
+            cell.detailTextLabel?.text = "12"
         }
         else if (indexPath.row == 1)
         {
             cell.textLabel?.text = "Personal Space"
-            cell.detailTextLabel?.text = "6"
+            cell.detailTextLabel?.text = "13"
         }
         else if (indexPath.row == 2)
         {
             cell.textLabel?.text = "Social Space"
-            cell.detailTextLabel?.text = "5"
+            cell.detailTextLabel?.text = "18"
         }
         else
         {
             cell.textLabel?.text = "Public Space"
-            cell.detailTextLabel?.text = "6"
+            cell.detailTextLabel?.text = "14"
         }
         
         return cell

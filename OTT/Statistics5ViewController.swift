@@ -10,6 +10,8 @@ import UIKit
 
 class Statistics5ViewController: UITableViewController {
     var valueToPass:Int = 0
+    var timeToPass:String = String()
+    var nameToPass:String = String()
     var memberData : SpaceMember!
     var marrMemberData : NSMutableArray!
     
@@ -68,12 +70,35 @@ class Statistics5ViewController: UITableViewController {
          */
         let space:SpaceMember = marrMemberData.objectAtIndex((indexPath.row)) as! SpaceMember
         
-        
+      
         cell.textLabel?.text = "\(space.GROUP_MEMBER_NM) "
         cell.detailTextLabel?.text = "\(space.TIME_SPEND) "
+
+        
+        cell.accessoryType = .DisclosureIndicator
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let space:SpaceMember = marrMemberData.objectAtIndex((indexPath.row)) as! SpaceMember
+        timeToPass = space.TIME_SPEND
+        nameToPass = space.GROUP_MEMBER_NM
+        self.performSegueWithIdentifier("seespacemore", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "seespacemore")
+        {
+            let destinationVC:Statistics6ViewController = segue.destinationViewController as! Statistics6ViewController
+            destinationVC.title = "Time on space with"
+            
+            destinationVC.timeToPass = timeToPass
+            destinationVC.nameToPass = "with " + nameToPass
+            
+        }
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

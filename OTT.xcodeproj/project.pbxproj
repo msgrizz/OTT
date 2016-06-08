@@ -99,6 +99,7 @@
 		B9742BB71D02E724002A9BF9 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */; };
 		B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF31D016E960038C818 /* Home1ViewController.swift */; };
 		B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */; };
+		B99CDF0D1D08810700A1B096 /* Statistics6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */; };
 		B9A333371D06912200E6ACFC /* Group4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A333361D06912200E6ACFC /* Group4ViewController.swift */; };
 		B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; };
 		B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -295,6 +296,7 @@
 		B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF31D016E960038C818 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewCell.swift; sourceTree = "<group>"; };
+		B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics6ViewController.swift; sourceTree = "<group>"; };
 		B9A333361D06912200E6ACFC /* Group4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group4ViewController.swift; sourceTree = "<group>"; };
 		B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -552,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				B9742BAE1D02C9C4002A9BF9 /* StatisticsViewController.swift */,
+				B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */,
 				B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */,
 				B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */,
 				B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */,
@@ -748,6 +751,7 @@
 				0530B62919D8F78000F366B6 /* PeripheralManagerBeaconsViewController.swift in Sources */,
 				056B7C7719DE5E18001B7F95 /* PeripheralManagerAddAdvertisedServiceViewController.swift in Sources */,
 				05B45BF719A78BA2009DAF6D /* PeripheralManagerServiceProfilesViewController.swift in Sources */,
+				B99CDF0D1D08810700A1B096 /* Statistics6ViewController.swift in Sources */,
 				B90EB3D21D07CDD4007B0F70 /* Statistics4ViewController.swift in Sources */,
 				05D9D50E19B0DA4C001DBEBC /* ConfigureViewController.swift in Sources */,
 				B963077A1CFECB8F00F4C22A /* FriendCell.swift in Sources */,
