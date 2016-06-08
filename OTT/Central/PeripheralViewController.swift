@@ -49,7 +49,7 @@ class PeripheralViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = self.peripheral.name
+        self.navigationItem.title = "Father's Galaxy S7"//self.peripheral.name
         self.discoveredAtLabel.text = dateFormatter.stringFromDate(self.peripheral.discoveredAt)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }

@@ -1,5 +1,5 @@
 //
-//  Statistics4ViewController.swift
+//  Statistics5ViewController.swift
 //  OTT
 //
 //  Created by 박재유 on 2016. 6. 8..
@@ -8,24 +8,8 @@
 
 import UIKit
 
-class Statistics4ViewController: UITableViewController {
+class Statistics5ViewController: UITableViewController {
 
-    @IBOutlet weak var tbAllMemberData: UITableView!
-    
-    var memberData : BrainMember!
-    var marrMemberData : NSMutableArray!
-    
-    func getMemberData()
-    {
-        marrMemberData = NSMutableArray()
-        marrMemberData = ModelManager.getInstance().getBrainAllData()
-        tbAllMemberData.reloadData()
-        
-        
-    }
-    override func viewWillAppear(animated: Bool) {
-        self.getMemberData()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,58 +29,23 @@ class Statistics4ViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return marrMemberData.count
-    }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Name with calculated relationship score"
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "Cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
-        }
-        /*
-         let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
-         cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: "LabelCell")
-         */
-        let brain:BrainMember = marrMemberData.objectAtIndex((indexPath.row)) as! BrainMember
-        
-        
-        cell.textLabel?.text = "\(brain.GROUP_MEMBER_NM) "
-        cell.detailTextLabel?.text = "\(brain.RELATIONSHIP_SCORE) "
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //print(group.GROUP_NM)
-        //if(indexPath.row == 0)
-        //{
-            //let group:Group = marrGroupData.objectAtIndex((indexPath.row)-1) as! Group
-            //valueToPass = Int(group.GROUP_SEQ)!
-            //valueToTitle = group.GROUP_NM
-        //}
-        //print("true answer : ?", valueToPass)
-        self.performSegueWithIdentifier("seemore", sender: self)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "seemore")
-        {
-            //let destinationVC:Statistics5ViewController = segue.destinationViewController as! Statistics5ViewController
-            //destinationVC.title = "See All Members"
-            
-        }
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.

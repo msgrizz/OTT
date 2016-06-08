@@ -369,11 +369,12 @@ class PeripheralsViewController : UITableViewController {
                 cell.nameLabel.text = "BRITZ"
             }
             //cell.nameLabel.text = "Father's Galaxy S7"
-            cell.nameLabel.textColor = UIColor.lightGrayColor()
-            cell.stateLabel.text = "Disconnected"
-            cell.stateLabel.textColor = UIColor.lightGrayColor()
+
+            cell.nameLabel.textColor = UIColor.blackColor()
+            cell.stateLabel.text = "Connected"
+            cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
             cell.accessoryType = .None
-            cell.rssiLabel.text = "-111"
+            cell.rssiLabel.text = "-63"
         }
         else if(indexPath.row == 2)
         {
@@ -387,18 +388,19 @@ class PeripheralsViewController : UITableViewController {
             }
             else if(self.title == "Social")
             {
-                cell.nameLabel.text = "CPUU's iPad"
+                cell.nameLabel.text = "Father's Galaxy S7"
             }
             else
             {
                 cell.nameLabel.text = "Air-Pad-A7"
             }
             //cell.nameLabel.text = "CPUU's MacBook Pro"
-            cell.nameLabel.textColor = UIColor.blackColor()
-            cell.stateLabel.text = "Connected"
-            cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
+            
+            cell.nameLabel.textColor = UIColor.lightGrayColor()
+            cell.stateLabel.text = "Disconnected"
+            cell.stateLabel.textColor = UIColor.lightGrayColor()
             cell.accessoryType = .None
-            cell.rssiLabel.text = "-93"
+            cell.rssiLabel.text = "-71"
         }
         else
         {

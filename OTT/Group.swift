@@ -32,3 +32,8 @@ class BrainMember: NSObject {
     var GROUP_MEMBER_NM: String = String()
     var RELATIONSHIP_SCORE: String = String()
 }
+
+class PieMember: NSObject {
+    var GROUP_MEMBER_NM: String = String()
+    var PERCENT: Double = 0
+}

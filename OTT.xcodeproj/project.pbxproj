@@ -77,6 +77,8 @@
 		05F2A8DD199271FA00004260 /* ServiceProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2A8D9199271FA00004260 /* ServiceProfilesViewController.swift */; };
 		05FAFC3519D30247003725B0 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FAFC3419D30247003725B0 /* Notify.swift */; };
 		B90EB3D21D07CDD4007B0F70 /* Statistics4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */; };
+		B90EB3D61D083618007B0F70 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EB3D51D083618007B0F70 /* Statistics2ViewController.swift */; };
+		B90EB3DC1D0841E1007B0F70 /* Statistics5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */; };
 		B96307581CFEC71F00F4C22A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B96307571CFEC71F00F4C22A /* libsqlite3.0.tbd */; };
 		B96307661CFEC7B600F4C22A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B963075B1CFEC7B600F4C22A /* FMDatabase.m */; };
 		B96307671CFEC7B600F4C22A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B963075D1CFEC7B600F4C22A /* FMDatabaseAdditions.m */; };
@@ -94,7 +96,6 @@
 		B963077E1CFECBEE00F4C22A /* Group3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B963077D1CFECBEE00F4C22A /* Group3ViewController.swift */; };
 		B9742BAF1D02C9C4002A9BF9 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BAE1D02C9C4002A9BF9 /* StatisticsViewController.swift */; };
 		B9742BB31D02D47C002A9BF9 /* Statistics1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB21D02D47C002A9BF9 /* Statistics1ViewController.swift */; };
-		B9742BB51D02D4A2002A9BF9 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB41D02D4A2002A9BF9 /* Statistics2ViewController.swift */; };
 		B9742BB71D02E724002A9BF9 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */; };
 		B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF31D016E960038C818 /* Home1ViewController.swift */; };
 		B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */; };
@@ -265,6 +266,8 @@
 		05F2A8D9199271FA00004260 /* ServiceProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProfilesViewController.swift; sourceTree = "<group>"; };
 		05FAFC3419D30247003725B0 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
 		B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Statistics4ViewController.swift; path = ../Statistics4ViewController.swift; sourceTree = "<group>"; };
+		B90EB3D51D083618007B0F70 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
+		B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics5ViewController.swift; sourceTree = "<group>"; };
 		B96307571CFEC71F00F4C22A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B963075A1CFEC7B600F4C22A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		B963075B1CFEC7B600F4C22A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -289,7 +292,6 @@
 		B963077D1CFECBEE00F4C22A /* Group3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group3ViewController.swift; sourceTree = "<group>"; };
 		B9742BAE1D02C9C4002A9BF9 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		B9742BB21D02D47C002A9BF9 /* Statistics1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics1ViewController.swift; sourceTree = "<group>"; };
-		B9742BB41D02D4A2002A9BF9 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
 		B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF31D016E960038C818 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewCell.swift; sourceTree = "<group>"; };
@@ -550,9 +552,10 @@
 			isa = PBXGroup;
 			children = (
 				B9742BAE1D02C9C4002A9BF9 /* StatisticsViewController.swift */,
+				B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */,
 				B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */,
 				B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */,
-				B9742BB41D02D4A2002A9BF9 /* Statistics2ViewController.swift */,
+				B90EB3D51D083618007B0F70 /* Statistics2ViewController.swift */,
 				B9742BB21D02D47C002A9BF9 /* Statistics1ViewController.swift */,
 			);
 			name = Statistics;
@@ -760,7 +763,6 @@
 				05B45C0219A78C6B009DAF6D /* PeripheralStore.swift in Sources */,
 				05B45BF819A78BA2009DAF6D /* PeripheralManagerServicesCharacteristicValuesViewController.swift in Sources */,
 				0507973519C4D0B100A4D547 /* BeaconRegionViewController.swift in Sources */,
-				B9742BB51D02D4A2002A9BF9 /* Statistics2ViewController.swift in Sources */,
 				05B48B5419C85B6900800327 /* BeaconStore.swift in Sources */,
 				05E68707195301B1009B38DA /* PeripheralAdvertisementsViewController.swift in Sources */,
 				05277CA01944CAE50022FB59 /* PeripheralsViewController.swift in Sources */,
@@ -797,6 +799,8 @@
 				05F2A8DB199271FA00004260 /* ServiceCharacteristicProfileValuesViewController.swift in Sources */,
 				05E68701194FF5A2009B38DA /* PeripheralViewController.swift in Sources */,
 				B9742BB71D02E724002A9BF9 /* Statistics3ViewController.swift in Sources */,
+				B90EB3D61D083618007B0F70 /* Statistics2ViewController.swift in Sources */,
+				B90EB3DC1D0841E1007B0F70 /* Statistics5ViewController.swift in Sources */,
 				B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */,
 				05B48B5819C9B7DF00800327 /* BeaconCell.swift in Sources */,
 				05F2A8DD199271FA00004260 /* ServiceProfilesViewController.swift in Sources */,

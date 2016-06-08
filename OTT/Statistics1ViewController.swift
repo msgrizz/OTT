@@ -10,7 +10,6 @@ import UIKit
 
 class Statistics1ViewController: UIViewController {
 
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //print("First VC will appear")

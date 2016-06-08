@@ -33,7 +33,7 @@ class ModelManager: NSObject {
     
     func addMemberData(memberInfo: GroupMember) -> Bool {
         sharedInstance.database!.open()
-        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO group_member (GROUP_MEMBER_NM, GROUP_MEMBER_VALUE, GROUP_SEQ, USER_ID ) VALUES (?, ?, ?, ?)", withArgumentsInArray: [memberInfo.GROUP_MEMBER_NM , memberInfo.GROUP_MEMBER_VALUE, 3, 1000000001])
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO group_member (GROUP_MEMBER_NM, GROUP_MEMBER_VALUE, GROUP_SEQ, USER_ID ) VALUES (?, ?, ?, ?)", withArgumentsInArray: [memberInfo.GROUP_MEMBER_NM , memberInfo.GROUP_MEMBER_VALUE, 1, 1000000001])
         sharedInstance.database!.close()
         return isInserted
     }
@@ -132,6 +132,23 @@ class ModelManager: NSObject {
         }
         sharedInstance.database!.close()
         return marrBrainInfo
+    }
+    
+    func getPieAllData() -> NSMutableArray {
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("WITH TOP_MEMBERS AS (SELECT B.GROUP_MEMBER_NM,  ROUND((B.RELATIONSHIP_SCORE* 0.1) / (A.RELATIONSHIP_SCORE_TOTAL * 0.1)  * 100, 2) AS PERCENT FROM   (SELECT  A.USER_ID, TOTAL(A.GROUP_MEMBER_VALUE * (STRFTIME('%s', B.END_TIME) - STRFTIME('%s', B.START_TIME)) / 60 / (B.SPACE_TPCD * B.SPACE_TPCD)) AS RELATIONSHIP_SCORE_TOTAL FROM    GROUP_MEMBER A, MEETING B WHERE   A.USER_ID = B.USER_ID AND A.GROUP_SEQ = B.GROUP_SEQ AND     A.GROUP_MEMBER_SEQ = B.GROUP_MEMBER_SEQ AND     STRFTIME('%s', DATE(B.START_TIME)) BETWEEN STRFTIME('%s', DATE('NOW', '-1 MONTH')) AND STRFTIME('%s', DATE('NOW', '-0 MONTH', '-1 DAY')) GROUP BY  A.USER_ID) A, (SELECT  A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ, A.GROUP_MEMBER_NM, TOTAL(A.GROUP_MEMBER_VALUE * (STRFTIME('%s', B.END_TIME) - STRFTIME('%s', B.START_TIME)) / 60 / (B.SPACE_TPCD * B.SPACE_TPCD)) AS RELATIONSHIP_SCORE                  FROM    GROUP_MEMBER A, MEETING B WHERE   A.USER_ID = B.USER_ID AND     A.GROUP_SEQ = B.GROUP_SEQ                AND A.GROUP_MEMBER_SEQ = B.GROUP_MEMBER_SEQ AND STRFTIME('%s', DATE(B.START_TIME)) BETWEEN STRFTIME('%s', DATE('NOW', '-1 MONTH')) AND STRFTIME('%s', DATE('NOW', '-0 MONTH', '-1 DAY')) GROUP BY  A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ) B WHERE   A.USER_ID = B.USER_ID ORDER BY PERCENT DESC LIMIT 9) SELECT GROUP_MEMBER_NM, PERCENT FROM TOP_MEMBERS UNION ALL SELECT 'Others' AS GROUP_MEMBER_NM, 100 - TOTAL(TOP_MEMBERS.PERCENT) AS PERCENT FROM TOP_MEMBERS ORDER BY PERCENT DESC;"
+            , withArgumentsInArray: nil)
+        let marrPieInfo : NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let pieInfo : PieMember = PieMember()
+                pieInfo.GROUP_MEMBER_NM = resultSet.stringForColumn("GROUP_MEMBER_NM")
+                pieInfo.PERCENT = Double(resultSet.stringForColumn("PERCENT"))!
+                marrPieInfo.addObject(pieInfo)
+            }
+        }
+        sharedInstance.database!.close()
+        return marrPieInfo
     }
     
 }

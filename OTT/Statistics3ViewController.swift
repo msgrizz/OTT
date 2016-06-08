@@ -14,8 +14,19 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var pieChartView: PieChartView!
     
+    var memberData : PieMember!
+    var marrMemberData : NSMutableArray!
+    
+    func getMemberData()
+    {
+        marrMemberData = NSMutableArray()
+        marrMemberData = ModelManager.getInstance().getPieAllData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getMemberData()
         self.setupPieChartView()
         
 
@@ -32,37 +43,33 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
     
     private func setPieChartData() {
         
-        let mult = UInt32(100)
-        let count = Int(5)
+//        let mult = UInt32(100)
+        let count = Int(10)
         
-        let parties = [
-            "Wife", "Team Manager", "Daughter", "MC 418 Clue", "Son", "Puppy",
-            "Party G", "Party H", "Party I", "Party J", "Party K", "Party L",
-            "Party M", "Party N", "Party O", "Party P", "Party Q", "Party R",
-            "Party S", "Party T", "Party U", "Party V", "Party W", "Party X",
-            "Party Y", "Party Z"
-        ]
+//        let parties = [
+//            "Wife", "Team Manager", "Daughter", "MC 418 Clue", "Son", "Puppy",
+//            "Party G", "Party H", "Party I", "Party J", "Party K", "Party L",
+//            "Party M", "Party N", "Party O", "Party P", "Party Q", "Party R",
+//            "Party S", "Party T", "Party U", "Party V", "Party W", "Party X",
+//            "Party Y", "Party Z"
+//        ]
         
         var yVals1 = [ChartDataEntry]()
+        var xVals = [String?]()
         
         // IMPORTANT: In a PieChart, no values (Entry) should have the same xIndex (even if from different DataSets), since no values can be drawn above each other.
         for i in 0 ..< count
         {
-            let chartDataEntry = BarChartDataEntry(value: Double((arc4random_uniform(mult) + mult/5)), xIndex: i)
+            let pie:PieMember = marrMemberData.objectAtIndex(i % marrMemberData.count) as! PieMember
+            let chartDataEntry = BarChartDataEntry(value: pie.PERCENT, xIndex: i)
             yVals1.append(chartDataEntry)
+            
+            xVals.append(pie.GROUP_MEMBER_NM)
+
         }
         
-        //let xVals = NSMutableArray()
-        var xVals = [String?]()
         
-        for i in 0 ..< count
-        {
-            //xVals.addObject(parties[i % parties.count])
-            xVals.append(parties[i % parties.count])
-            //[xVals addObject:parties[i % parties.count]];
-        }
-        
-        print (xVals)
+        //print (xVals)
 
         let dataSet = PieChartDataSet(yVals: yVals1, label: "")
         dataSet.sliceSpace = 2.0
