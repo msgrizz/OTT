@@ -9,6 +9,7 @@
 import UIKit
 
 class Statistics1ViewController: UIViewController {
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,6 +22,14 @@ class Statistics1ViewController: UIViewController {
         //print("First VC will disappear")
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "seeall")
+        {
+            let destinationVC:Statistics4ViewController = segue.destinationViewController as! Statistics4ViewController
+            destinationVC.title = "See All Members"
+            
+        }
+    }
 
     
 }

@@ -3387,6 +3387,9 @@
                                 <rect key="frame" x="124" y="432" width="221" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="See all members ..."/>
+                                <connections>
+                                    <segue destination="idx-TV-0eb" kind="show" identifier="seeall" id="LfS-Yc-JZo"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -3394,6 +3397,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4h1-zA-LN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2925" y="3804"/>
+        </scene>
+        <!--Statistics4 View Controller-->
+        <scene sceneID="wR6-e5-msf">
+            <objects>
+                <tableViewController id="idx-TV-0eb" customClass="Statistics4ViewController" customModule="OTT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6By-lL-Nwn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xbu-g0-ZXn">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xbu-g0-ZXn" id="nfi-ga-5dN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="idx-TV-0eb" id="HHS-qw-31J"/>
+                            <outlet property="delegate" destination="idx-TV-0eb" id="HJk-NG-Mso"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tbAllMemberData" destination="6By-lL-Nwn" id="1Gf-3b-t8W"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atf-82-g1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925" y="4518"/>
         </scene>
         <!--Statistics2 View Controller-->
         <scene sceneID="cBH-iv-eUs">
