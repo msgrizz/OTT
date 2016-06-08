@@ -400,7 +400,7 @@ class PeripheralsViewController : UITableViewController {
             cell.stateLabel.text = "Disconnected"
             cell.stateLabel.textColor = UIColor.lightGrayColor()
             cell.accessoryType = .None
-            cell.rssiLabel.text = "-71"
+            cell.rssiLabel.text = "-148"
         }
         else
         {

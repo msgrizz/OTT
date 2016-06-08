@@ -10,6 +10,8 @@ import UIKit
 
 class Statistics2ViewController: UITableViewController {
 
+    var valueToTitle: String = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -75,6 +77,38 @@ class Statistics2ViewController: UITableViewController {
     }
     
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if (indexPath.row == 0)
+        {
+            valueToTitle = "Intimate"
+        }
+        else if (indexPath.row == 1)
+        {
+            valueToTitle = "Personal"
+        }
+        else if (indexPath.row == 2)
+        {
+            valueToTitle = "Social"
+        }
+        else
+        {
+            valueToTitle = "Public"
+        }
+        
+        performSegueWithIdentifier("seespace", sender: cell)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destinationVC:Statistics5ViewController = segue.destinationViewController as! Statistics5ViewController
+        destinationVC.title = valueToTitle
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
