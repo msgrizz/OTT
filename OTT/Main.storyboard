@@ -3455,6 +3455,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="RQM-WK-Pio"/>
+                    <connections>
+                        <outlet property="tbAllMemberData" destination="mEo-9J-oyx" id="uCj-jC-LOh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6np-mg-BVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

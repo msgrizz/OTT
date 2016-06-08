@@ -9,8 +9,9 @@
 import UIKit
 
 class Statistics2ViewController: UITableViewController {
-
+    var valueToPass:Int = 0
     var valueToTitle: String = String()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,18 +85,22 @@ class Statistics2ViewController: UITableViewController {
         if (indexPath.row == 0)
         {
             valueToTitle = "Intimate"
+            valueToPass = 1
         }
         else if (indexPath.row == 1)
         {
             valueToTitle = "Personal"
+            valueToPass = 2
         }
         else if (indexPath.row == 2)
         {
             valueToTitle = "Social"
+            valueToPass = 3
         }
         else
         {
             valueToTitle = "Public"
+            valueToPass = 4
         }
         
         performSegueWithIdentifier("seespace", sender: cell)
@@ -106,6 +111,7 @@ class Statistics2ViewController: UITableViewController {
         
         let destinationVC:Statistics5ViewController = segue.destinationViewController as! Statistics5ViewController
         destinationVC.title = valueToTitle
+        destinationVC.valueToPass = valueToPass
     }
     
     

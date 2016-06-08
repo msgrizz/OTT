@@ -9,8 +9,21 @@
 import UIKit
 
 class Statistics5ViewController: UITableViewController {
+    var valueToPass:Int = 0
+    var memberData : SpaceMember!
+    var marrMemberData : NSMutableArray!
     
-
+    @IBOutlet weak var tbAllMemberData: UITableView!
+    
+    func getMemberData()
+    {
+        marrMemberData = NSMutableArray()
+        marrMemberData = ModelManager.getInstance().getSpaceAllData(valueToPass)
+        tbAllMemberData.reloadData()
+    }
+    override func viewWillAppear(animated: Bool) {
+        self.getMemberData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,23 +44,36 @@ class Statistics5ViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return marrMemberData.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Person with hours"
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cellIdentifier = "Cell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIdentifier)
+        }
+        /*
+         let cell = tableView.dequeueReusableCellWithIdentifier("LabelCell", forIndexPath: indexPath)
+         cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: "LabelCell")
+         */
+        let space:SpaceMember = marrMemberData.objectAtIndex((indexPath.row)) as! SpaceMember
+        
+        
+        cell.textLabel?.text = "\(space.GROUP_MEMBER_NM) "
+        cell.detailTextLabel?.text = "\(space.TIME_SPEND) "
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

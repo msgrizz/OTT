@@ -37,3 +37,12 @@ class PieMember: NSObject {
     var GROUP_MEMBER_NM: String = String()
     var PERCENT: Double = 0
 }
+
+class SpaceMember:NSObject {
+    var SPACE_NM: String = String()
+    var GROUP_MEMBER_NM: String = String()
+    var TIME_SPEND: String = String()
+    var USER_ID: String = String()
+    var GROUP_SEQ: String = String()
+    var GROUP_MEMBER_SEQ: String = String()
+}

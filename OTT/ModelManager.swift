@@ -151,4 +151,24 @@ class ModelManager: NSObject {
         return marrPieInfo
     }
     
+    func getSpaceAllData(SPACE_TPCD: Int) -> NSMutableArray {
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT  CASE B.SPACE_TPCD WHEN '1' THEN 'Intimate Space' WHEN '2' THEN 'Personal Space' WHEN '3' THEN 'Social Space' WHEN '4' THEN 'Public Space' ELSE B.SPACE_TPCD END AS SPACE_NM, A.GROUP_MEMBER_NM, IFNULL((STRFTIME('%s', B.END_TIME) - STRFTIME('%s', B.START_TIME)) / 60 / 60, 0) || 'h ' || IFNULL((STRFTIME('%s', B.END_TIME) - STRFTIME('%s', B.START_TIME)) / 60 % 60, 0)  || ''' ' || IFNULL((STRFTIME('%s', B.END_TIME) - STRFTIME('%s', B.START_TIME)) % 60, 0)  || '\" '  AS TIME_SPEND, A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ FROM GROUP_MEMBER A, MEETING B WHERE   A.USER_ID = B.USER_ID AND     A.GROUP_SEQ = B.GROUP_SEQ AND     A.GROUP_MEMBER_SEQ = B.GROUP_MEMBER_SEQ AND     B.SPACE_TPCD = (?) GROUP BY  A.USER_ID, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ ORDER BY  TIME_SPEND DESC, A.GROUP_MEMBER_VALUE DESC, A.GROUP_MEMBER_NM, A.GROUP_SEQ, A.GROUP_MEMBER_SEQ;", withArgumentsInArray: [String(SPACE_TPCD)])
+        let marrSpaceInfo : NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let spaceInfo : SpaceMember = SpaceMember()
+                spaceInfo.SPACE_NM = resultSet.stringForColumn("SPACE_NM")
+                spaceInfo.GROUP_MEMBER_NM = resultSet.stringForColumn("GROUP_MEMBER_NM")
+                spaceInfo.TIME_SPEND = resultSet.stringForColumn("TIME_SPEND")
+                spaceInfo.USER_ID = resultSet.stringForColumn("USER_ID")
+                spaceInfo.GROUP_SEQ = resultSet.stringForColumn("GROUP_SEQ")
+                spaceInfo.GROUP_MEMBER_SEQ = resultSet.stringForColumn("GROUP_MEMBER_SEQ")
+                marrSpaceInfo.addObject(spaceInfo)
+            }
+        }
+        sharedInstance.database!.close()
+        return marrSpaceInfo
+    }
+    
 }
