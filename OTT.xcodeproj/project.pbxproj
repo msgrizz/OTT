@@ -76,6 +76,7 @@
 		05F2A8DC199271FA00004260 /* ServiceCharacteristicProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2A8D8199271FA00004260 /* ServiceCharacteristicProfileViewController.swift */; };
 		05F2A8DD199271FA00004260 /* ServiceProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F2A8D9199271FA00004260 /* ServiceProfilesViewController.swift */; };
 		05FAFC3519D30247003725B0 /* Notify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FAFC3419D30247003725B0 /* Notify.swift */; };
+		4200CEDE7ADAB2669877910A /* Pods_OTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549C7A0A88590D731B757F57 /* Pods_OTT.framework */; };
 		B90EB3D21D07CDD4007B0F70 /* Statistics4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */; };
 		B90EB3D61D083618007B0F70 /* Statistics2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EB3D51D083618007B0F70 /* Statistics2ViewController.swift */; };
 		B90EB3DC1D0841E1007B0F70 /* Statistics5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */; };
@@ -107,6 +108,7 @@
 		B9A333371D06912200E6ACFC /* Group4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A333361D06912200E6ACFC /* Group4ViewController.swift */; };
 		B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; };
 		B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC3C6CB683C6463602705D61 /* Pods_OTTTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21A57B81C56BD0879EEE28E /* Pods_OTTTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +200,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00ACD442FB8EFC8AF100F579 /* Pods-OTTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTTTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTTTests/Pods-OTTTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0507973019C4CEEC00A4D547 /* BeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BeaconsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0507973419C4D0B100A4D547 /* BeaconRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BeaconRegionViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		05277C9D1944CAE50022FB59 /* PeripheralsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PeripheralsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -270,6 +273,10 @@
 		05F2A8D8199271FA00004260 /* ServiceCharacteristicProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCharacteristicProfileViewController.swift; sourceTree = "<group>"; };
 		05F2A8D9199271FA00004260 /* ServiceProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProfilesViewController.swift; sourceTree = "<group>"; };
 		05FAFC3419D30247003725B0 /* Notify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notify.swift; sourceTree = "<group>"; };
+		3340F8DCAD763A6282CC3D0D /* Pods-OTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTT/Pods-OTT.debug.xcconfig"; sourceTree = "<group>"; };
+		549C7A0A88590D731B757F57 /* Pods_OTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6621CC37B195EEA34635940C /* Pods-OTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTT/Pods-OTT.release.xcconfig"; sourceTree = "<group>"; };
+		708F9DE63D68EC2E5BB3A037 /* Pods-OTTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTTTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTTTests/Pods-OTTTests.release.xcconfig"; sourceTree = "<group>"; };
 		B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Statistics4ViewController.swift; path = ../Statistics4ViewController.swift; sourceTree = "<group>"; };
 		B90EB3D51D083618007B0F70 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
 		B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics5ViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +314,7 @@
 		B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics6ViewController.swift; sourceTree = "<group>"; };
 		B9A333361D06912200E6ACFC /* Group4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group4ViewController.swift; sourceTree = "<group>"; };
 		B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		E21A57B81C56BD0879EEE28E /* Pods_OTTTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTTTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +327,7 @@
 				B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */,
 				05B45BE719A788E0009DAF6D /* CoreLocation.framework in Frameworks */,
 				05840F8E1942098300C744E6 /* CoreBluetooth.framework in Frameworks */,
+				4200CEDE7ADAB2669877910A /* Pods_OTT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +335,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3C6CB683C6463602705D61 /* Pods_OTTTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +413,8 @@
 				05840F76194206F100C744E6 /* BlueCapTests */,
 				05840F60194206F100C744E6 /* Products */,
 				B96307591CFEC7B600F4C22A /* fmdb */,
+				3A9997965E16B4E27076547A /* Pods */,
+				848CEDC19DA46D8929544608 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -519,6 +531,26 @@
 			path = Profiles;
 			sourceTree = "<group>";
 		};
+		3A9997965E16B4E27076547A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3340F8DCAD763A6282CC3D0D /* Pods-OTT.debug.xcconfig */,
+				6621CC37B195EEA34635940C /* Pods-OTT.release.xcconfig */,
+				00ACD442FB8EFC8AF100F579 /* Pods-OTTTests.debug.xcconfig */,
+				708F9DE63D68EC2E5BB3A037 /* Pods-OTTTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		848CEDC19DA46D8929544608 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549C7A0A88590D731B757F57 /* Pods_OTT.framework */,
+				E21A57B81C56BD0879EEE28E /* Pods_OTTTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B96307591CFEC7B600F4C22A /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,10 +634,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05840F7D194206F100C744E6 /* Build configuration list for PBXNativeTarget "OTT" */;
 			buildPhases = (
+				DC694B5E2328E9D099CD4ACB /* [CP] Check Pods Manifest.lock */,
 				05840F5B194206F100C744E6 /* Sources */,
 				05840F5C194206F100C744E6 /* Frameworks */,
 				05840F5D194206F100C744E6 /* Resources */,
 				05840FAC19420B0000C744E6 /* Embed Frameworks */,
+				D14153487128ACDA14AEEDD9 /* [CP] Embed Pods Frameworks */,
+				1FFB2852E564325F77D7C62F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,9 +658,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05840F80194206F100C744E6 /* Build configuration list for PBXNativeTarget "OTTTests" */;
 			buildPhases = (
+				C1FA51BC0402BA87B32074EE /* [CP] Check Pods Manifest.lock */,
 				05840F6F194206F100C744E6 /* Sources */,
 				05840F70194206F100C744E6 /* Frameworks */,
 				05840F71194206F100C744E6 /* Resources */,
+				459A8A7AA03167855C91A2E8 /* [CP] Embed Pods Frameworks */,
+				4327FC2EAF10A4EC877DFF62 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -752,6 +790,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FFB2852E564325F77D7C62F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTT/Pods-OTT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4327FC2EAF10A4EC877DFF62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTTTests/Pods-OTTTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		459A8A7AA03167855C91A2E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTTTests/Pods-OTTTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1FA51BC0402BA87B32074EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D14153487128ACDA14AEEDD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTT/Pods-OTT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC694B5E2328E9D099CD4ACB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05840F5B194206F100C744E6 /* Sources */ = {
@@ -965,6 +1096,7 @@
 		};
 		05840F7E194206F100C744E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3340F8DCAD763A6282CC3D0D /* Pods-OTT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -989,6 +1121,7 @@
 		};
 		05840F7F194206F100C744E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6621CC37B195EEA34635940C /* Pods-OTT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1009,6 +1142,7 @@
 		};
 		05840F81194206F100C744E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00ACD442FB8EFC8AF100F579 /* Pods-OTTTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlueCap.app/BlueCap";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1027,6 +1161,7 @@
 		};
 		05840F82194206F100C744E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 708F9DE63D68EC2E5BB3A037 /* Pods-OTTTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlueCap.app/BlueCap";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";

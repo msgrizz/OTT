@@ -1,0 +1,6 @@
+framework module Pods_OTTTests {
+  umbrella header "Pods-OTTTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
