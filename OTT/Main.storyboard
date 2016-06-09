@@ -2244,11 +2244,11 @@
             </objects>
             <point key="canvasLocation" x="2545" y="310"/>
         </scene>
-        <!--Beacons-->
+        <!--Memories-->
         <scene sceneID="qkx-gB-Z3A">
             <objects>
                 <navigationController id="tr1-EH-bbr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Beacons" image="Beacons" id="DCy-qn-vZN"/>
+                    <tabBarItem key="tabBarItem" title="Memories" image="Memory" id="DCy-qn-vZN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="QcJ-Mm-AxF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3388,45 +3388,39 @@
         <scene sceneID="3Ud-A0-nwk">
             <objects>
                 <tableViewController id="mUd-J4-S6C" customClass="ResultsTableViewController" customModule="OTT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rds-GN-kIV">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="435" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rds-GN-kIV">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" id="uKQ-Ne-xnY" customClass="ResultsTableCell" customModule="OTT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" rowHeight="435" id="uKQ-Ne-xnY" customClass="ResultsTableCell" customModule="OTT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="435"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uKQ-Ne-xnY" id="RKN-eK-Gsi">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="435"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-G5-eNe">
-                                            <rect key="frame" x="14" y="2" width="293" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="293" id="HQl-lr-Ih5"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-G5-eNe">
+                                            <rect key="frame" x="37" y="379" width="102" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzH-4q-iLf">
-                                            <rect key="frame" x="14" y="22" width="293" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="All" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-Gx-QTL">
+                                            <rect key="frame" x="17" y="8" width="350" height="363"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzH-4q-iLf">
+                                            <rect key="frame" x="37" y="406" width="330" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="VzH-4q-iLf" firstAttribute="leading" secondItem="m5U-G5-eNe" secondAttribute="leading" id="6Yv-KY-F2J"/>
-                                        <constraint firstAttribute="bottom" secondItem="VzH-4q-iLf" secondAttribute="bottom" id="8hI-GQ-4rN"/>
-                                        <constraint firstItem="VzH-4q-iLf" firstAttribute="trailing" secondItem="m5U-G5-eNe" secondAttribute="trailing" id="KaL-vk-c5l"/>
-                                        <constraint firstItem="m5U-G5-eNe" firstAttribute="leading" secondItem="RKN-eK-Gsi" secondAttribute="leadingMargin" constant="6" id="iLo-xe-kbX"/>
-                                        <constraint firstItem="m5U-G5-eNe" firstAttribute="top" secondItem="RKN-eK-Gsi" secondAttribute="topMargin" constant="-6" id="m8W-9H-9CI"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="m5U-G5-eNe" id="NrG-N2-t7c"/>
                                     <outlet property="phoneLabel" destination="VzH-4q-iLf" id="CMr-jV-nmu"/>
+                                    <outlet property="takePicture" destination="dj6-Gx-QTL" id="Ckb-sN-ZG8"/>
                                     <segue destination="vwI-RG-iII" kind="show" id="1gg-Wu-9wQ"/>
                                 </connections>
                             </tableViewCell>
@@ -3436,10 +3430,11 @@
                             <outlet property="delegate" destination="mUd-J4-S6C" id="g8l-yg-Jd9"/>
                         </connections>
                     </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unf-aF-ecX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2271" y="5476"/>
+            <point key="canvasLocation" x="2270.5" y="5475.5"/>
         </scene>
         <!--Route View Controller-->
         <scene sceneID="vVp-vS-W6M">
@@ -3450,11 +3445,11 @@
                         <viewControllerLayoutGuide type="bottom" id="msF-mk-rpO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GIQ-pW-1Fq">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-bc-93g">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3476,10 +3471,10 @@
     </scenes>
     <resources>
         <image name="All" width="50" height="50"/>
-        <image name="Beacons" width="32" height="32"/>
         <image name="Brain" width="836" height="858"/>
         <image name="Configure" width="32" height="32"/>
         <image name="Group" width="50" height="50"/>
+        <image name="Memory" width="30" height="30"/>
         <image name="Search" width="30" height="30"/>
         <image name="Statistics" width="32" height="32"/>
         <image name="Statistics_Space" width="645" height="662"/>

@@ -12,10 +12,12 @@ import MapKit
 class ResultsTableViewController: UITableViewController {
     
     var mapItems: [MKMapItem]!
+
+    var CellImages = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        CellImages = ["Picture1.png", "Picture2.png", "Picture3.png", "Picture4.png", "Picture5.png", "Picture6.png", "Picture7.png", "Picture8.png"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -58,8 +60,19 @@ class ResultsTableViewController: UITableViewController {
         // Configure the cell...
         let row = indexPath.row
         let item = mapItems[row]
-        cell.nameLabel.text = item.name
-        cell.phoneLabel.text = item.phoneNumber
+        
+        if ( row < 8){
+            cell.nameLabel.text = "도곡근린공원"
+            cell.phoneLabel.text = "#아빠와 #등산 #우리가함께한시간 #힐링힐링"
+            cell.takePicture.image = UIImage(named: CellImages[row])
+        }
+        else{
+            cell.nameLabel.text = item.name
+            cell.phoneLabel.text = item.phoneNumber
+            cell.takePicture.image = UIImage(named: "Badge.png")
+        }
+        
+
         return cell
         
     }
