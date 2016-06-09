@@ -99,6 +99,10 @@
 		B9742BB71D02E724002A9BF9 /* Statistics3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */; };
 		B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF31D016E960038C818 /* Home1ViewController.swift */; };
 		B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */; };
+		B99C1DBC1D08F96C00CA7CE3 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C1DBB1D08F96C00CA7CE3 /* MemoryViewController.swift */; };
+		B99C1DC31D08FB3800CA7CE3 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C1DC21D08FB3800CA7CE3 /* ResultsTableViewController.swift */; };
+		B99C1DC51D08FB6600CA7CE3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C1DC41D08FB6600CA7CE3 /* RouteViewController.swift */; };
+		B99C1DC71D08FB9700CA7CE3 /* ResultsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C1DC61D08FB9700CA7CE3 /* ResultsTableCell.swift */; };
 		B99CDF0D1D08810700A1B096 /* Statistics6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */; };
 		B9A333371D06912200E6ACFC /* Group4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A333361D06912200E6ACFC /* Group4ViewController.swift */; };
 		B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; };
@@ -296,6 +300,10 @@
 		B9742BB61D02E724002A9BF9 /* Statistics3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics3ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF31D016E960038C818 /* Home1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
 		B97E8DF61D016EBB0038C818 /* Home1ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home1ViewCell.swift; sourceTree = "<group>"; };
+		B99C1DBB1D08F96C00CA7CE3 /* MemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
+		B99C1DC21D08FB3800CA7CE3 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		B99C1DC41D08FB6600CA7CE3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		B99C1DC61D08FB9700CA7CE3 /* ResultsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableCell.swift; sourceTree = "<group>"; };
 		B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics6ViewController.swift; sourceTree = "<group>"; };
 		B9A333361D06912200E6ACFC /* Group4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group4ViewController.swift; sourceTree = "<group>"; };
 		B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
@@ -412,6 +420,7 @@
 			children = (
 				B96307761CFECAA300F4C22A /* Group */,
 				056B7C7419DE4E52001B7F95 /* Main.storyboard */,
+				B99C1DC11D08FB0B00CA7CE3 /* Memory */,
 				05840F64194206F100C744E6 /* AppDelegate.swift */,
 				B963076E1CFEC8C900F4C22A /* Util.swift */,
 				B96307701CFEC8E100F4C22A /* Group.swift */,
@@ -562,6 +571,17 @@
 				B9742BB21D02D47C002A9BF9 /* Statistics1ViewController.swift */,
 			);
 			name = Statistics;
+			sourceTree = "<group>";
+		};
+		B99C1DC11D08FB0B00CA7CE3 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				B99C1DBB1D08F96C00CA7CE3 /* MemoryViewController.swift */,
+				B99C1DC21D08FB3800CA7CE3 /* ResultsTableViewController.swift */,
+				B99C1DC41D08FB6600CA7CE3 /* RouteViewController.swift */,
+				B99C1DC61D08FB9700CA7CE3 /* ResultsTableCell.swift */,
+			);
+			name = Memory;
 			sourceTree = "<group>";
 		};
 		B9D9685D1D04709F00777EA8 /* Products */ = {
@@ -754,6 +774,7 @@
 				B99CDF0D1D08810700A1B096 /* Statistics6ViewController.swift in Sources */,
 				B90EB3D21D07CDD4007B0F70 /* Statistics4ViewController.swift in Sources */,
 				05D9D50E19B0DA4C001DBEBC /* ConfigureViewController.swift in Sources */,
+				B99C1DC71D08FB9700CA7CE3 /* ResultsTableCell.swift in Sources */,
 				B963077A1CFECB8F00F4C22A /* FriendCell.swift in Sources */,
 				05D9D50A19B0D7B0001DBEBC /* ConfigStore.swift in Sources */,
 				059F670A19D747EA00F53D56 /* ConfigureScanServiceViewController.swift in Sources */,
@@ -770,6 +791,7 @@
 				05B48B5419C85B6900800327 /* BeaconStore.swift in Sources */,
 				05E68707195301B1009B38DA /* PeripheralAdvertisementsViewController.swift in Sources */,
 				05277CA01944CAE50022FB59 /* PeripheralsViewController.swift in Sources */,
+				B99C1DC51D08FB6600CA7CE3 /* RouteViewController.swift in Sources */,
 				05B45BF319A78BA2009DAF6D /* PeripheralManagerServiceCharacteristicEditDiscreteValuesViewController.swift in Sources */,
 				05B1AEBC197C28DE00371E73 /* PeripheralServiceCharacteristicEditDiscreteValuesViewController.swift in Sources */,
 				053B0CC219BF2717006C7D1F /* ConfigureScanTimeoutViewController.swift in Sources */,
@@ -795,6 +817,7 @@
 				B9742BB31D02D47C002A9BF9 /* Statistics1ViewController.swift in Sources */,
 				05D9D51619B0E464001DBEBC /* ConfigureScanServicesViewController.swift in Sources */,
 				B97E8DF41D016E960038C818 /* Home1ViewController.swift in Sources */,
+				B99C1DBC1D08F96C00CA7CE3 /* MemoryViewController.swift in Sources */,
 				05B6F07B19587AB700D798CB /* PeripheralServiceCharacteristicsViewController.swift in Sources */,
 				052A1ECC1C8CCDD300FBB45B /* ConfigurePeripheralMaximumDisconnectionsViewController.swift in Sources */,
 				B96307681CFEC7B600F4C22A /* FMDatabasePool.m in Sources */,
@@ -806,6 +829,7 @@
 				B90EB3D61D083618007B0F70 /* Statistics2ViewController.swift in Sources */,
 				B90EB3DC1D0841E1007B0F70 /* Statistics5ViewController.swift in Sources */,
 				B97E8DF71D016EBB0038C818 /* Home1ViewCell.swift in Sources */,
+				B99C1DC31D08FB3800CA7CE3 /* ResultsTableViewController.swift in Sources */,
 				05B48B5819C9B7DF00800327 /* BeaconCell.swift in Sources */,
 				05F2A8DD199271FA00004260 /* ServiceProfilesViewController.swift in Sources */,
 				05F2A8DC199271FA00004260 /* ServiceCharacteristicProfileViewController.swift in Sources */,

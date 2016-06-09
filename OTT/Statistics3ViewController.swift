@@ -110,12 +110,12 @@ class Statistics3ViewController: UIViewController, ChartViewDelegate {
         self.pieChartView.drawSlicesUnderHoleEnabled = false
         self.pieChartView.holeRadiusPercent = 0.58;
         self.pieChartView.transparentCircleRadiusPercent = 0.61
-        self.pieChartView.descriptionText = ""
+        self.pieChartView.descriptionText = "Our Time Together"
         self.pieChartView.setExtraOffsets(left: 5, top: 10, right: 5, bottom: 5)
         
         self.pieChartView.drawCenterTextEnabled = true
         
-        //self.pieChartView.centerAttributedText = "차트의 설2명"
+        //self.pieChartView.centerAttributedText = "Pie Chart Example"
         self.pieChartView.drawHoleEnabled = true
         self.pieChartView.rotationAngle = 0
         self.pieChartView.rotationEnabled = true
