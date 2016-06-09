@@ -9,12 +9,15 @@
 
 import UIKit
 import MapKit
+import NMPopUpViewSwift
 
 class MemoryViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var searchText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     var matchingItems: [MKMapItem] = [MKMapItem]()
+    
+    var popViewController : PopUpViewControllerSwift!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +101,32 @@ class MemoryViewController: UIViewController, MKMapViewDelegate {
         })
     }
     
+    @IBAction func showPopUp(sender: AnyObject) {
+        let bundle = NSBundle(forClass: PopUpViewControllerSwift.self)
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Pad)
+        {
+            self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPad", bundle: bundle)
+            self.popViewController.title = "This is a popup view"
+            self.popViewController.showInView(self.view, withImage: UIImage(named: "Winner"), withMessage: "Do you want to take a picture?", animated: true)
+        } else
+        {
+            if UIScreen.mainScreen().bounds.size.width > 320 {
+                if UIScreen.mainScreen().scale == 3 {
+                    self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6Plus", bundle: bundle)
+                    self.popViewController.title = "This is a popup view"
+                    self.popViewController.showInView(self.view, withImage: UIImage(named: "Winner"), withMessage: "Do you want to take a picture?", animated: true)
+                } else {
+                    self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController_iPhone6", bundle: bundle)
+                    self.popViewController.title = "This is a popup view"
+                    self.popViewController.showInView(self.view, withImage: UIImage(named: "Winner"), withMessage: "Do you want to take a picture?", animated: true)
+                }
+            } else {
+                self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController", bundle: bundle)
+                self.popViewController.title = "This is a popup view"
+                self.popViewController.showInView(self.view, withImage: UIImage(named: "Winner"), withMessage: "Do you want to take a picture?", animated: true)
+            }
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

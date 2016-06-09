@@ -3374,7 +3374,13 @@
                             <constraint firstItem="4LL-mM-g3K" firstAttribute="leading" secondItem="4j8-7Y-zGt" secondAttribute="leading" id="oqo-AV-87F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2Gx-8U-jWs"/>
+                    <navigationItem key="navigationItem" id="2Gx-8U-jWs">
+                        <barButtonItem key="rightBarButtonItem" title=" " id="F8e-7p-DA6">
+                            <connections>
+                                <action selector="showPopUp:" destination="t7E-mE-zIj" id="oRG-cy-lwa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="4j8-7Y-zGt" id="GHl-IE-C4O"/>
                         <outlet property="searchText" destination="4LL-mM-g3K" id="5tA-jp-v4G"/>

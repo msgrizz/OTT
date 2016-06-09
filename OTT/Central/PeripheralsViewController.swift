@@ -318,93 +318,16 @@ class PeripheralsViewController : UITableViewController {
     }
     
     override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Singletons.centralManager.peripherals.count + 3
+        return Singletons.centralManager.peripherals.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MainStoryboard.peripheralCell, forIndexPath: indexPath) as! PeripheralCell
         
-        if(indexPath.row == 0)
+        
+        if(true)
         {
-            
-            if(self.title == "Intimate")
-            {
-                cell.nameLabel.text = "MI"
-            }
-            else if(self.title == "Personal")
-            {
-                cell.nameLabel.text = "HJPARK's Watch"
-            }
-            else if(self.title == "Social")
-            {
-                cell.nameLabel.text = "HJPARK's iPhone"
-            }
-            else
-            {
-                cell.nameLabel.text = "PONUS"
-            }
-            //cell.nameLabel.text = "CPUU's iPad"
-            cell.nameLabel.textColor = UIColor.blackColor()
-            cell.stateLabel.text = "Connected"
-            cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
-            cell.accessoryType = .None
-            cell.rssiLabel.text = "-52"
-        }
-        else if(indexPath.row == 1)
-        {
-            if(self.title == "Intimate")
-            {
-                cell.nameLabel.text = "Father's Galaxy S7"
-            }
-            else if(self.title == "Personal")
-            {
-                cell.nameLabel.text = "CPUU's iPad"
-            }
-            else if(self.title == "Social")
-            {
-                cell.nameLabel.text = "Kimjaewook's MacBook"
-            }
-            else
-            {
-                cell.nameLabel.text = "BRITZ"
-            }
-            //cell.nameLabel.text = "Father's Galaxy S7"
-
-            cell.nameLabel.textColor = UIColor.blackColor()
-            cell.stateLabel.text = "Connected"
-            cell.stateLabel.textColor = UIColor(red:0.1, green:0.7, blue:0.1, alpha:0.5)
-            cell.accessoryType = .None
-            cell.rssiLabel.text = "-63"
-        }
-        else if(indexPath.row == 2)
-        {
-            if(self.title == "Intimate")
-            {
-                cell.nameLabel.text = "BRITZ"
-            }
-            else if(self.title == "Personal")
-            {
-                cell.nameLabel.text = "Father's Galaxy S7"
-            }
-            else if(self.title == "Social")
-            {
-                cell.nameLabel.text = "Father's Galaxy S7"
-            }
-            else
-            {
-                cell.nameLabel.text = "Air-Pad-A7"
-            }
-            //cell.nameLabel.text = "CPUU's MacBook Pro"
-            
-            cell.nameLabel.textColor = UIColor.lightGrayColor()
-            cell.stateLabel.text = "Disconnected"
-            cell.stateLabel.textColor = UIColor.lightGrayColor()
-            cell.accessoryType = .None
-            cell.rssiLabel.text = "-148"
-        }
-        else
-        {
-            let peripheral = self.peripherals[indexPath.row-3]
+            let peripheral = self.peripherals[indexPath.row]
             cell.nameLabel.text = peripheral.name
             cell.accessoryType = .None
             if peripheral.state == .Connected {
