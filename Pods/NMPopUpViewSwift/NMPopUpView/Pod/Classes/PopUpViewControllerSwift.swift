@@ -14,7 +14,24 @@ import QuartzCore
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var logoImg: UIImageView!
+    @IBOutlet weak var currentImage: UIImageView!
     
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
+    
+    @IBAction func takePicture(sender: AnyObject) {
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .Camera
+                imagePicker.cameraCaptureMode = .Photo
+                presentViewController(imagePicker, animated: true, completion: {})
+            } else {
+                //postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
+            }
+        } else {
+            //]postAlert("Camera inaccessable", message: "Application cannot access the camera.")
+        }
+    }
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
