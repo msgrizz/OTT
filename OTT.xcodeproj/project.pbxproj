@@ -106,8 +106,6 @@
 		B99C1DC71D08FB9700CA7CE3 /* ResultsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C1DC61D08FB9700CA7CE3 /* ResultsTableCell.swift */; };
 		B99CDF0D1D08810700A1B096 /* Statistics6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */; };
 		B9A333371D06912200E6ACFC /* Group4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A333361D06912200E6ACFC /* Group4ViewController.swift */; };
-		B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; };
-		B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9D968641D04709F00777EA8 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC3C6CB683C6463602705D61 /* Pods_OTTTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21A57B81C56BD0879EEE28E /* Pods_OTTTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,40 +145,33 @@
 			remoteGlobalIDString = 05840F5E194206F100C744E6;
 			remoteInfo = BlueCap;
 		};
-		B9D968631D04709F00777EA8 /* PBXContainerItemProxy */ = {
+		B915DF9D1D156E74002470CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			containerPortal = B915DF961D156E74002470CE /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
 			remoteInfo = "Charts-iOS";
 		};
-		B9D968651D04709F00777EA8 /* PBXContainerItemProxy */ = {
+		B915DF9F1D156E74002470CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			containerPortal = B915DF961D156E74002470CE /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
 			remoteInfo = "Charts-TV";
 		};
-		B9D968671D04709F00777EA8 /* PBXContainerItemProxy */ = {
+		B915DFA11D156E74002470CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			containerPortal = B915DF961D156E74002470CE /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
 			remoteInfo = "Charts-OSX";
 		};
-		B9D968691D04709F00777EA8 /* PBXContainerItemProxy */ = {
+		B915DFA31D156E74002470CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+			containerPortal = B915DF961D156E74002470CE /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
 			remoteInfo = ChartsTests;
-		};
-		B9D9686D1D04711500777EA8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -192,7 +183,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0551210619F5554C00ED3B74 /* BlueCapKit.framework in Embed Frameworks */,
-				B9D9686C1D04711500777EA8 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +270,7 @@
 		B90EB3D11D07CDD4007B0F70 /* Statistics4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Statistics4ViewController.swift; path = ../Statistics4ViewController.swift; sourceTree = "<group>"; };
 		B90EB3D51D083618007B0F70 /* Statistics2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics2ViewController.swift; sourceTree = "<group>"; };
 		B90EB3DB1D0841E1007B0F70 /* Statistics5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics5ViewController.swift; sourceTree = "<group>"; };
+		B915DF961D156E74002470CE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		B96307571CFEC71F00F4C22A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B963075A1CFEC7B600F4C22A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		B963075B1CFEC7B600F4C22A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -313,7 +304,6 @@
 		B99C1DC61D08FB9700CA7CE3 /* ResultsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableCell.swift; sourceTree = "<group>"; };
 		B99CDF0C1D08810700A1B096 /* Statistics6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics6ViewController.swift; sourceTree = "<group>"; };
 		B9A333361D06912200E6ACFC /* Group4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group4ViewController.swift; sourceTree = "<group>"; };
-		B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		E21A57B81C56BD0879EEE28E /* Pods_OTTTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTTTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -324,7 +314,6 @@
 			files = (
 				B96307581CFEC71F00F4C22A /* libsqlite3.0.tbd in Frameworks */,
 				0551210519F5554C00ED3B74 /* BlueCapKit.framework in Frameworks */,
-				B9D9686B1D04711500777EA8 /* Charts.framework in Frameworks */,
 				05B45BE719A788E0009DAF6D /* CoreLocation.framework in Frameworks */,
 				05840F8E1942098300C744E6 /* CoreBluetooth.framework in Frameworks */,
 				4200CEDE7ADAB2669877910A /* Pods_OTT.framework in Frameworks */,
@@ -403,8 +392,8 @@
 		05840F56194206F100C744E6 = {
 			isa = PBXGroup;
 			children = (
+				B915DF961D156E74002470CE /* Charts.xcodeproj */,
 				055120F919F553DB00ED3B74 /* BlueCapKit.xcodeproj */,
-				B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */,
 				B96307741CFEC9A500F4C22A /* ott_db.sqlite */,
 				B96307571CFEC71F00F4C22A /* libsqlite3.0.tbd */,
 				05840F8D1942098300C744E6 /* CoreBluetooth.framework */,
@@ -551,6 +540,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B915DF971D156E74002470CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B915DF9E1D156E74002470CE /* Charts.framework */,
+				B915DFA01D156E74002470CE /* Charts.framework */,
+				B915DFA21D156E74002470CE /* Charts.framework */,
+				B915DFA41D156E74002470CE /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B96307591CFEC7B600F4C22A /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,17 +616,6 @@
 			name = Memory;
 			sourceTree = "<group>";
 		};
-		B9D9685D1D04709F00777EA8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B9D968641D04709F00777EA8 /* Charts.framework */,
-				B9D968661D04709F00777EA8 /* Charts.framework */,
-				B9D968681D04709F00777EA8 /* Charts.framework */,
-				B9D9686A1D04709F00777EA8 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -647,7 +636,6 @@
 			dependencies = (
 				0551210319F5541000ED3B74 /* PBXTargetDependency */,
 				0551210819F5554C00ED3B74 /* PBXTargetDependency */,
-				B9D9686E1D04711500777EA8 /* PBXTargetDependency */,
 			);
 			name = OTT;
 			productName = BlueCap;
@@ -712,8 +700,8 @@
 					ProjectRef = 055120F919F553DB00ED3B74 /* BlueCapKit.xcodeproj */;
 				},
 				{
-					ProductGroup = B9D9685D1D04709F00777EA8 /* Products */;
-					ProjectRef = B9D9685C1D04709F00777EA8 /* Charts.xcodeproj */;
+					ProductGroup = B915DF971D156E74002470CE /* Products */;
+					ProjectRef = B915DF961D156E74002470CE /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -739,32 +727,32 @@
 			remoteRef = 0551210019F553DB00ED3B74 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B9D968641D04709F00777EA8 /* Charts.framework */ = {
+		B915DF9E1D156E74002470CE /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = B9D968631D04709F00777EA8 /* PBXContainerItemProxy */;
+			remoteRef = B915DF9D1D156E74002470CE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B9D968661D04709F00777EA8 /* Charts.framework */ = {
+		B915DFA01D156E74002470CE /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = B9D968651D04709F00777EA8 /* PBXContainerItemProxy */;
+			remoteRef = B915DF9F1D156E74002470CE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B9D968681D04709F00777EA8 /* Charts.framework */ = {
+		B915DFA21D156E74002470CE /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = B9D968671D04709F00777EA8 /* PBXContainerItemProxy */;
+			remoteRef = B915DFA11D156E74002470CE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B9D9686A1D04709F00777EA8 /* ChartsTests.xctest */ = {
+		B915DFA41D156E74002470CE /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = B9D968691D04709F00777EA8 /* PBXContainerItemProxy */;
+			remoteRef = B915DFA31D156E74002470CE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1004,11 +992,6 @@
 			isa = PBXTargetDependency;
 			target = 05840F5E194206F100C744E6 /* OTT */;
 			targetProxy = 05840F74194206F100C744E6 /* PBXContainerItemProxy */;
-		};
-		B9D9686E1D04711500777EA8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = B9D9686D1D04711500777EA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

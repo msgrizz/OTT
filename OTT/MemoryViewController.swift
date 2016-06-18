@@ -26,14 +26,29 @@ class MemoryViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func zoomIn(sender: AnyObject) {
+        
         let userLocation = mapView.userLocation
         
-        let region = MKCoordinateRegionMakeWithDistance(
-            userLocation.location!.coordinate, 2000, 2000)
-        
-        mapView.setRegion(region, animated: true)
-        
+        if(userLocation.location?.coordinate != nil)
+        {
+            let region = MKCoordinateRegionMakeWithDistance(userLocation.location!.coordinate, 2000, 2000)
+            mapView.setRegion(region, animated: true)
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Our Time Together", message: "GPS access is restricted. In order to use tracking, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Go to Settings now", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) in
+                print("")
+                UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
+            }))
+            
+            //let alertController = UIAlertController(title: "Our Time Together", message:"위치정보를 불러올 수 없습니다.", preferredStyle: UIAlertControllerStyle.Alert)
+            //alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
+    
     
     @IBAction func changeMapType(sender: AnyObject) {
         if mapView.mapType == MKMapType.Standard {

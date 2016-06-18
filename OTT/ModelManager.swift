@@ -81,7 +81,7 @@ class ModelManager: NSObject {
             }
         }
         sharedInstance.database!.close()
-        print("\(ave)")
+        //print("\(ave)")
         return (round(100*ave)/100)
     }
     
